@@ -22,6 +22,9 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 == Changelog ==
 
+= 1.4 =
+* Update for virtue 2.0
+
 = 1.3 =
 * Fix Blank Popup
 
