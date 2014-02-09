@@ -37,47 +37,47 @@ var ButtonDialog = {
 		case '1':
 			output = '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnstart mceItem" title="hcolumns" />';
 			if(document.getElementById('2column').checked) {
-				  	output += '<div class="span6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span6 mceItem" title="columnhelper span6" />';
+				  	output += '<div class="col-md-6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span6 mceItem" title="columnhelper span6" />';
+					output += '<div class="col-md-6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('2columnright').checked) {
-				  	output += '<div class="span4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span4 mceItem" title="columnhelper span4" />';
+				  	output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span8 mceItem" title="columnhelper span8" />';
+					output += '<div class="col-md-8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('2columnleft').checked) {
-				  	output += '<div class="span8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span8 mceItem" title="columnhelper span8" />';
+				  	output += '<div class="col-md-8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span4 mceItem" title="columnhelper span4" />';
+					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('3column').checked) {
-				  	output += '<div class="span4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span4 mceItem" title="columnhelper span4" />';
+				  	output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span4 mceItem" title="columnhelper span4" />';
+					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span4 mceItem" title="columnhelper span4" />';
+					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('4column').checked) {
-				  	output += '<div class="span3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span3 mceItem" title="columnhelper span3" />';
+				  	output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span3 mceItem" title="columnhelper span3" />';
+					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span3 mceItem" title="columnhelper span3" />';
+					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="span3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper span3 mceItem" title="columnhelper span3" />';
+					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}

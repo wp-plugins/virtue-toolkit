@@ -7,10 +7,10 @@ function kad_accordion_shortcode_function($atts, $content ) {
 	if( is_array( $GLOBALS['panes'] ) ){
 		
 	foreach( $GLOBALS['panes'] as $tab ){
-	$tabs[] = '<div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$random.'" href="#collapse'.$random.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$random.$tab['link'].'" class="accordion-body collapse '.$tab['in'].'"><div class="accordion-inner postclass">'.$tab['content'].'</div></div></div>';
+	$tabs[] = '<div class="panel panel-default"><div class="panel-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$random.'" href="#collapse'.$random.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$random.$tab['link'].'" class="panel-collapse collapse '.$tab['in'].'"><div class="panel-body postclass">'.$tab['content'].'</div></div></div>';
 
 }
-$return = "\n".'<div class="accordion" id="accordionname'.$random.'">'.implode( "\n", $tabs ).'</div>'."\n";
+$return = "\n".'<div class="panel-group" id="accordionname'.$random.'">'.implode( "\n", $tabs ).'</div>'."\n";
 }
 return $return;
 }
@@ -20,7 +20,7 @@ function kad_accordion_pane_function($atts, $content ) {
 'title' => 'Pane %d',
 'start' => ''
 ), $atts));
-if ($start != '') {$open = 'open';} else {$open = '';}
+if ($start != '') {$open = '';} else {$open = 'collapsed';}
 if ($start != '') {$in = 'in';} else {$in = '';}
 
 $x = $GLOBALS['pane_count'];
@@ -61,43 +61,43 @@ $GLOBALS['tab_count']++;
 
 //Shortcode for columns
 function kad_column_shortcode_function( $atts, $content ) {
-	return '<div class="row-fluid">'.do_shortcode($content).'</div>';
+	return '<div class="row">'.do_shortcode($content).'</div>';
 }
 function kad_hcolumn_shortcode_function( $atts, $content ) {
-	return '<div class="row-fluid">'.do_shortcode($content).'</div>';
+	return '<div class="row">'.do_shortcode($content).'</div>';
 }
 function kad_column11_function( $atts, $content ) {
-	return '<div class="span11">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-11">'.do_shortcode($content).'</div>';
 }
 function kad_column10_function( $atts, $content ) {
-	return '<div class="span10">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-10">'.do_shortcode($content).'</div>';
 }
 function kad_column9_function( $atts, $content ) {
-	return '<div class="span9">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-9">'.do_shortcode($content).'</div>';
 }
 function kad_column8_function( $atts, $content ) {
-	return '<div class="span8">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-8">'.do_shortcode($content).'</div>';
 }
 function kad_column7_function( $atts, $content ) {
-	return '<div class="span7">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-7">'.do_shortcode($content).'</div>';
 }
 function kad_column6_function( $atts, $content ) {
-	return '<div class="span6">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-6">'.do_shortcode($content).'</div>';
 }
 function kad_column5_function( $atts, $content ) {
-	return '<div class="span5">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-5">'.do_shortcode($content).'</div>';
 }
 function kad_column4_function( $atts, $content ) {
-	return '<div class="span4">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-4">'.do_shortcode($content).'</div>';
 }
 function kad_column3_function( $atts, $content ) {
-	return '<div class="span3">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-3">'.do_shortcode($content).'</div>';
 }
 function kad_column2_function( $atts, $content ) {
-	return '<div class="span2">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-2">'.do_shortcode($content).'</div>';
 }
 function kad_column1_function( $atts, $content ) {
-	return '<div class="span1">'.do_shortcode($content).'</div>';
+	return '<div class="col-md-1">'.do_shortcode($content).'</div>';
 }
 //Shortcode for Icons
 function kad_icon_shortcode_function( $atts) {
