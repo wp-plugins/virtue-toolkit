@@ -3,7 +3,7 @@
 /*
 Plugin Name: Virtue ToolKit
 Description: Custom Portfolio and Shortcode functionality for Virtue Theme
-Version: 1.4
+Version: 1.5
 Author: Kadence Themes
 Author URI: http://kadencethemes.com/
 License: GPLv2 or later
