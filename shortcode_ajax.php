@@ -31,6 +31,22 @@ function virtue_video_ajax_tinymce() {
 }
 add_action('wp_ajax_kadvideo_tinymce', 'virtue_video_ajax_tinymce');
 
+function virtue_youtube_ajax_tinymce() {
+    if (!current_user_can('edit_pages') && !current_user_can('edit_posts'))
+        die(__("You are not allowed to be here"));
+
+    include_once( dirname(dirname(__FILE__)) . '/virtue-toolkit/shortcodes/youtube/youtube_popup.php');
+}
+add_action('wp_ajax_kadyoutube_tinymce', 'virtue_youtube_ajax_tinymce');
+
+function virtue_vimeo_ajax_tinymce() {
+    if (!current_user_can('edit_pages') && !current_user_can('edit_posts'))
+        die(__("You are not allowed to be here"));
+
+    include_once( dirname(dirname(__FILE__)) . '/virtue-toolkit/shortcodes/vimeo/vimeo_popup.php');
+}
+add_action('wp_ajax_kadvimeo_tinymce', 'virtue_vimeo_ajax_tinymce');
+
 function virtue_btns_ajax_tinymce() {
     if (!current_user_can('edit_pages') && !current_user_can('edit_posts'))
         die(__("You are not allowed to be here"));

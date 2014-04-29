@@ -10,11 +10,11 @@ global $wp_scripts;
 <title><?php _e("Insert Columns", "virtue"); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
 <base target="_self" />
 <?php wp_print_scripts(); ?>
 <script type="text/javascript">
- 
+ var url = '<?php echo plugins_url(); ?>';
 var ButtonDialog = {
 	local_ed : 'ed',
 	init : function(ed) {
@@ -35,53 +35,53 @@ var ButtonDialog = {
 		switch (coutput)
 			{
 		case '1':
-			output = '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnstart mceItem" title="hcolumns" />';
+			output = '<img src="'+url+'/virtue-toolkit/images/t.gif" class="columnstart mceItem" title="hcolumns" />';
 			if(document.getElementById('2column').checked) {
-				  	output += '<div class="col-md-6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
+				  	output += '<div class="col-md-6"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-6"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
+					output += '<div class="col-md-6"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-6 mceItem" title="columnhelper col-md-6" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('2columnright').checked) {
-				  	output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
+				  	output += '<div class="col-md-4"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
+					output += '<div class="col-md-8"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('2columnleft').checked) {
-				  	output += '<div class="col-md-8"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
+				  	output += '<div class="col-md-8"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-8 mceItem" title="columnhelper col-md-8" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
+					output += '<div class="col-md-4"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('3column').checked) {
-				  	output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
+				  	output += '<div class="col-md-4"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
+					output += '<div class="col-md-4"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-4"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
+					output += '<div class="col-md-4"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-4 mceItem" title="columnhelper col-md-4" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}else if(document.getElementById('4column').checked) {
-				  	output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
+				  	output += '<div class="col-md-3"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
+					output += '<div class="col-md-3"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
+					output += '<div class="col-md-3"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
-					output += '<div class="col-md-3"><img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
+					output += '<div class="col-md-3"><img src="'+url+'/virtue-toolkit/images/t.gif" class="columnhelper col-md-3 mceItem" title="columnhelper col-md-3" />';
 					output += '<p>add content here</p>';
 					output += '</div> ';
 				}
-				output += '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnend mceItem" title="/hcolumns" />';
+				output += '<img src="'+url+'/virtue-toolkit/images/t.gif" class="columnend mceItem" title="/hcolumns" />';
 				
 		break;
 		default:
@@ -144,10 +144,10 @@ var ButtonDialog = {
 tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
  
 </script>
-<style type="text/css" media="screen"> #icon-dialog label {font-size:12px; line-height:24px; width:150px; display:inline-block; text-align:right;} #icon-dialog label.imglabel {width: auto; text-align: left; padding-left: 10px;} #icon-dialog a#insert {margin-top:2px;} #icon-dialog p {font-size:12px;} #icon-dialog .option-row {padding-bottom:6px; border-bottom: solid 1px #d7d7d7; margin-bottom:8px;} #icon-dialog select {width:159px; height:24px;} </style>
+<style type="text/css" media="screen"> .kad-popup {padding: 0 8px; font-size: 0;} #icon-dialog {font-size: 12px;} #icon-dialog label {font-size:12px; line-height:24px; width:150px; display:inline-block; text-align:right;} #icon-dialog label.imglabel {width: auto; text-align: left; padding-left: 10px;} #icon-dialog a#insert {margin-top:2px;} #icon-dialog p {font-size:12px;} #icon-dialog .option-row {padding-bottom:6px; border-bottom: solid 1px #d7d7d7; margin-bottom:8px;} #icon-dialog select {width:159px; height:24px;} </style>
 
 </head>
-<body>
+<body class="kad-popup">
 	<div id="icon-dialog">
 		<form action="/" method="get" id="columnform" accept-charset="utf-8">
         	<div>

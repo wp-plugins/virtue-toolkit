@@ -66,12 +66,12 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
  
 </script>
 
-<style type="text/css" media="screen"> #icon-dialog label {font-size:14px; display:block; padding:4px;} #icon-dialog label.hex {font-size:12px; line-height:24px; display:inline-block; padding:6px 4px 6px 12px;} #icon-dialog select {display:block; height:28px; width:300px; font-size:12px;} #icon-dialog input {display:block; width:300px; height:24px;} #icon-dialog input.btn-hex {display:inline-block; width:120px; height:24px;} #icon-dialog a#insert {margin-top:15px;} .linebreak {margin-bottom:6px; border-bottom: solid 1px #d7d7d7; padding-bottom:6px}
+<style type="text/css" media="screen"> .kad-popup {padding: 0 8px; font-size: 0;} #icon-dialog {font-size: 12px;} #icon-dialog label {font-size:14px; display:block; padding:4px;} #icon-dialog label.hex {font-size:12px; line-height:24px; display:inline-block; padding:6px 4px 6px 12px;} #icon-dialog select {display:block; height:28px; width:300px; font-size:12px;} #icon-dialog input {display:block; width:300px; height:24px;} #icon-dialog input.btn-hex {display:inline-block; width:120px; height:24px;} #icon-dialog a#insert {margin-top:15px;} .linebreak {margin-bottom:6px; border-bottom: solid 1px #d7d7d7; padding-bottom:6px}
 
 </style>
 
 </head>
-<body>
+<body class="kad-popup">
 	<div id="icon-dialog">
 		<form action="/" method="get" accept-charset="utf-8">
         <div class="linebreak">

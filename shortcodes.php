@@ -5,10 +5,11 @@ function kad_accordion_shortcode_function($atts, $content ) {
 	do_shortcode( $content );
 	$random = rand(1, 99);
 	if( is_array( $GLOBALS['panes'] ) ){
-		
+	$i = 0;
 	foreach( $GLOBALS['panes'] as $tab ){
-	$tabs[] = '<div class="panel panel-default"><div class="panel-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$random.'" href="#collapse'.$random.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$random.$tab['link'].'" class="panel-collapse collapse '.$tab['in'].'"><div class="panel-body postclass">'.$tab['content'].'</div></div></div>';
-
+		if ($i % 2 == 0) {$eo = "even";} else {$eo = "odd";}
+	$tabs[] = '<div class="panel panel-default panel-'.$eo.'"><div class="panel-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$random.'" href="#collapse'.$random.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$random.$tab['link'].'" class="panel-collapse collapse '.$tab['in'].'"><div class="panel-body postclass">'.$tab['content'].'</div></div></div>';
+	$i++;
 }
 $return = "\n".'<div class="panel-group" id="accordionname'.$random.'">'.implode( "\n", $tabs ).'</div>'."\n";
 }
@@ -120,6 +121,66 @@ function kad_video_shortcode_function( $atts, $content) {
 	else { $output = '<div class="videofit">'.$content.'</div>'; }
 	return $output;
 }
+// Based on Ultimate Shortcodes youtube and vimeo shortcodes
+function kad_youtube_shortcode_function( $atts, $content) {
+		// Prepare data
+		$return = array();
+		$params = array();
+		$atts = shortcode_atts(array(
+				'url'  => false,
+				'width' => 600,
+				'height' => 400,
+				'maxwidth' => '',
+				'autoplay' => 'false',
+				'controls' => 'true',
+				'hidecontrols' => 'false',
+				'fs' => 'true',
+				'modestbranding' => 'false',
+				'theme' => 'dark'
+		), $atts, 'kad_youtube' );
+
+		if ( !$atts['url'] ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
+		// Check that url is specified
+		if ( !$id ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		// Prepare params
+		if($atts['hidecontrols'] == 'true') {$atts['controls'] = 'false';}
+		foreach ( array('autoplay', 'controls', 'fs', 'modestbranding', 'theme' ) as $param ) $params[$param] = str_replace( array( 'false', 'true', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
+		// Prepare player parameters
+		$params = http_build_query( $params );
+		if($atts['maxwidth']) {$maxwidth = 'style="max-width:'.$atts['maxwidth'].'px;"';} else{ $maxwidth = '';}
+		// Create player
+		$return[] = '<div class="kad-youtube-shortcode videofit" '.$maxwidth.' >';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '</div>';
+		// Return result
+		return implode( '', $return );
+}
+function kad_vimeo_shortcode_function( $atts, $content) {
+		$return = array();
+		$atts = shortcode_atts( array(
+				'url'        => false,
+				'width'      => 600,
+				'height'     => 400,
+				'maxwidth' => '',
+				'autoplay'   => 'no'
+			), $atts, 'vimeo' );
+		if ( !$atts['url'] ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
+		// Check that url is specified
+		if ( !$id ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+
+		if($atts['maxwidth']) {$maxwidth = 'style="max-width:'.$atts['maxwidth'].'px;"';} else{ $maxwidth = '';}
+		$autoplay = ( $atts['autoplay'] === 'yes' ) ? '&amp;autoplay=1' : '';
+		// Create player
+		$return[] = '<div class="kad-vimeo-shortcode  videofit '.$maxwidth.'">';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] .
+			'" src="http://player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
+			$autoplay . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '</div>';
+		// Return result
+		return implode( '', $return );
+	}
 //Button
 function kad_button_shortcode_function( $atts) {
 	extract(shortcode_atts(array(
@@ -218,6 +279,8 @@ function virtuetoolkit_register_shortcodes(){
    add_shortcode('space_20', 'kad_hrpadding10_function');
    add_shortcode('space_40', 'kad_hrpadding20_function');
    add_shortcode('space_80', 'kad_hrpadding40_function');
+      add_shortcode('kad_youtube', 'kad_youtube_shortcode_function');
+   add_shortcode('kad_vimeo', 'kad_vimeo_shortcode_function');
    add_shortcode('clear', 'kad_clearfix_function');
 }
 add_action( 'init', 'virtuetoolkit_register_shortcodes');
@@ -230,7 +293,8 @@ function virtue_register_button( $buttons ) {
    array_push( $buttons, "|", "kadquote" );
    array_push( $buttons, "|", "kadbtn" );
    array_push( $buttons, "|", "kadicon" );
-   array_push( $buttons, "|", "kadvideo" );      
+   array_push( $buttons, "|", "kadyoutube" );
+   array_push( $buttons, "|", "kadvimeo" );      
    return $buttons;
 }
 function virtue_add_plugin( $plugin_array ) {
@@ -238,6 +302,8 @@ function virtue_add_plugin( $plugin_array ) {
    $plugin_array['kadicon'] = VIRTUE_TOOLKIT_URL . '/shortcodes/icons/icon_shortgen.js';
    $plugin_array['kadaccordion'] = VIRTUE_TOOLKIT_URL . '/shortcodes/accordion/accordion_shortgen.js';
    $plugin_array['kadvideo'] = VIRTUE_TOOLKIT_URL . '/shortcodes/video/video_shortgen.js';
+   $plugin_array['kadyoutube'] = VIRTUE_TOOLKIT_URL . '/shortcodes/youtube/youtube_shortgen.js';
+   $plugin_array['kadvimeo'] = VIRTUE_TOOLKIT_URL . '/shortcodes/vimeo/vimeo_shortgen.js';
    $plugin_array['kadquote'] = VIRTUE_TOOLKIT_URL . '/shortcodes/pullquote/quote_shortgen.js';
    $plugin_array['kadbtn'] = VIRTUE_TOOLKIT_URL . '/shortcodes/btns/btns_shortgen.js';
    $plugin_array['kaddivider'] = VIRTUE_TOOLKIT_URL . '/shortcodes/divider/divider_shortgen.js';

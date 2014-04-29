@@ -47,12 +47,12 @@ var ButtonDialog = {
 tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
  
 </script>
-<style type="text/css" media="screen"> #icon-dialog label {font-size:14px; display:block; padding:4px;}  #icon-dialog select {display:block; height:28px; width:200px; font-size:12px;} #icon-dialog a#insert {margin-top:10px;}
+<style type="text/css" media="screen"> .kad-popup {padding: 0 8px; font-size: 0;} #icon-dialog {font-size: 12px;} #icon-dialog label {font-size:14px; display:block; padding:4px;}  #icon-dialog select {display:block; height:28px; width:200px; font-size:12px;} #icon-dialog a#insert {margin-top:10px;}
 
 </style>
 
 </head>
-<body>
+<body class="kad-popup">
 	<div id="icon-dialog">
 		<form action="/" method="get" accept-charset="utf-8">
 			<div>

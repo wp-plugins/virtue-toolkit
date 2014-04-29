@@ -14,7 +14,7 @@ global $wp_scripts;
 <base target="_self" />
 <?php wp_print_scripts(); ?>
 <script type="text/javascript">
- 
+ var url = '<?php echo plugins_url(); ?>';
 var ButtonDialog = {
 	local_ed : 'ed',
 	init : function(ed) {
@@ -32,12 +32,12 @@ var ButtonDialog = {
 		 
 		var output = '';
 			if(width)
-			output += '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="kadvideo mceItem" title="video width='+width+'" />';
+			output += '<img src="'+url+'/virtue-toolkit/images/t.gif" class="kadvideo mceItem" title="video width='+width+'" />';
 			else {
-			output += '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="kadvideo mceItem" title="video" />';
+			output += '<img src="'+url+'/virtue-toolkit/images/t.gif" class="kadvideo mceItem" title="video" />';
 			}
 			output += video;
-			output += '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="kadvideoend mceItem" title="/video" />';
+			output += '<img src="'+url+'/virtue-toolkit/images/t.gif" class="kadvideoend mceItem" title="/video" />';
 			
 		tinyMCEPopup.execCommand('mceInsertContent', false, output);
 		 
