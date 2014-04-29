@@ -20,30 +20,30 @@
 			// Register buttons
 			ed.addButton('kadvideo', {title : 'Insert video', cmd : 'mcekadvideo', image: url + '/img/video.png' });
 			ed.onBeforeSetContent.add(function(ed, o) {
-				o.content = t._do_video(o.content);
+				o.content = t._do_video(o.content, url);
 			});
 			ed.onBeforeSetContent.add(function(ed, o) {
-				o.content = t._do_videoend(o.content);
+				o.content = t._do_videoend(o.content, url);
 			});
 
 			ed.onPostProcess.add(function(ed, o) {
 				if (o.get)
-					o.content = t._get_video(o.content);
+					o.content = t._get_video(o.content, url);
 			});
 			ed.onPostProcess.add(function(ed, o) {
 				if (o.get)
-					o.content = t._get_videoend(o.content);
+					o.content = t._get_videoend(o.content, url);
 			});
 		},
 		
 		_do_video : function(co) {
 			return co.replace(/\[video([^\]]*)\]/g, function(a,b){
-				return '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="kadvideo mceItem" title="video'+tinymce.DOM.encode(b)+'" />';
+				return '<img src="'+url+'/img/t.gif" class="kadvideo mceItem" title="video'+tinymce.DOM.encode(b)+'" />';
 			});
 		},
 		_do_videoend : function(co) {
 			return co.replace(/\[\/video([^\]]*)\]/g, function(a,b){
-				return '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="kadvideoend mceItem" title="/video" />';
+				return '<img src="'+url+'/img/t.gif" class="kadvideoend mceItem" title="/video" />';
 			});
 		},
 

@@ -7,7 +7,7 @@
 				ed.windowManager.open({
 					 file: ajaxurl + '?action=kadcolumns_tinymce',
 					width : 350 + parseInt(ed.getLang('button.delta_width', 0)), // size of our window
-					height : 420 + parseInt(ed.getLang('button.delta_height', 0)), // size of our window
+					height : 380 + parseInt(ed.getLang('button.delta_height', 0)), // size of our window
 					inline : 1
 				}, {
 					plugin_url : url
@@ -17,13 +17,13 @@
 			// Register buttons
 			ed.addButton('kadcolumns', {title : 'Insert Columns', cmd : 'mcekadcolumns', image: url + '/img/columns.png' });
 			ed.onBeforeSetContent.add(function(ed, o) {
-				o.content = t._do_column(o.content);
+				o.content = t._do_column(o.content, url);
 			});
 			ed.onBeforeSetContent.add(function(ed, o) {
-				o.content = t._do_columnstart(o.content);
+				o.content = t._do_columnstart(o.content, url);
 			});
 			ed.onBeforeSetContent.add(function(ed, o) {
-				o.content = t._do_columnend(o.content);
+				o.content = t._do_columnend(o.content, url);
 			});
 
 			ed.onPostProcess.add(function(ed, o) {
@@ -39,19 +39,19 @@
 					o.content = t._get_columnend(o.content);
 			});
 		},
-		_do_column : function(co) {
+		_do_column : function(co, url) {
 			return co.replace(/\[columnhelper([^\]]*)\]/g, function(a,b){
-				return '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnhelper '+tinymce.DOM.encode(b)+' mceItem" title="columnhelper'+tinymce.DOM.encode(b)+'" />';
+				return '<img src="'+url+'/img/t.gif" class="columnhelper '+tinymce.DOM.encode(b)+' mceItem" title="columnhelper'+tinymce.DOM.encode(b)+'" />';
 			});
 		},
-		_do_columnstart : function(co) {
+		_do_columnstart : function(co, url) {
 			return co.replace(/\[hcolumns([^\]]*)\]/g, function(a,b){
-				return '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnstart mceItem" title="hcolumns" />';
+				return '<img src="'+url+'/img/t.gif" class="columnstart mceItem" title="hcolumns" />';
 			});
 		},
-		_do_columnend : function(co) {
+		_do_columnend : function(co, url) {
 			return co.replace(/\[\/hcolumns([^\]]*)\]/g, function(a,b){
-				return '<img src="'+tinymce.baseURL+'/plugins/wpgallery/img/t.gif" class="columnend mceItem" title="/hcolumns" />';
+				return '<img src="'+url+'/img/t.gif" class="columnend mceItem" title="/hcolumns" />';
 			});
 		},
 
