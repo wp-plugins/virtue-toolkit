@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 1.7 =
+* Fix Missing files
 
 = 1.6 =
 * Updates for wordpress 3.9
