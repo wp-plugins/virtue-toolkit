@@ -187,9 +187,10 @@ function kad_button_shortcode_function( $atts) {
 		'bcolor' => '',
 		'link' => '',
 		'text' => '',
+		'target' => '_self',
 		'tcolor' => '',
 ), $atts));
-	return '<a href="'.$link.'" class="kad-btn kad-btn-primary" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
+	return '<a href="'.$link.'" class="kad-btn kad-btn-primary" target="'.$target.'" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
 }
 function kad_blockquote_shortcode_function( $atts, $content) {
 	extract(shortcode_atts(array(
