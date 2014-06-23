@@ -29,7 +29,7 @@ function portfolio_post_init() {
     'capability_type' => 'post', 
     'hierarchical' => false,
     'menu_position' => 8,
-    'menu_icon' =>  VIRTUE_TOOLKIT_URL .'/images/portfolio-icon.png',
+    'menu_icon' =>  'dashicons-format-gallery',
     'supports' => array( 'title', 'editor', 'author', 'page-attributes', 'thumbnail', 'comments' )
   ); 
   // Initialize Taxonomy Labels
