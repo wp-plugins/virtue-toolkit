@@ -1,19 +1,19 @@
-=== Virtue ToolKit ===
+=== Virtue / Pinnacle ToolKit ===
 Contributors: britner
 Tags: 
 Requires at least: 3.2
-Tested up to: 3.9
-Stable tag: 1.8
+Tested up to: 4.0
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Custom Portfolio and Shortcode functionality for Virtue Theme
+Custom Portfolio and Shortcode functionality for Virtue and Pinnacle Wordpress Theme
 
 == Description ==
 
-Custom Portfolio and Shortcode functionality for Virtue Theme
+Custom Portfolio and Shortcode functionality for Virtue and Pinnacle Wordpress Theme
 
-Not intended to work with any other theme.
+Not intended to work with any other themes.
 
 == Installation ==
 
@@ -21,6 +21,12 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 1.9 =
+* Fix some video shortcode issues.
+* Add support for portfolio excerpt.
+* Add support for pinnacle theme.
+* 4.0 Support
 
 = 1.8 =
 * Add target option to button shortcode.
