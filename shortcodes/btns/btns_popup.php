@@ -32,7 +32,8 @@ var ButtonDialog = {
 		var texthex = jQuery('#icon-dialog input#text-color-hex').val();
 		var bcolor = jQuery('#icon-dialog select#btn-color').val();
 		var btnhex = jQuery('#icon-dialog input#btn-color-hex').val();
-		var btnlink = jQuery('#icon-dialog input#btn-link').val();		 		 
+		var btnlink = jQuery('#icon-dialog input#btn-link').val();
+		var btarget = jQuery('#icon-dialog select#btn-target').val();		 		 
 		 
 		var output = '';
 		
@@ -53,7 +54,8 @@ var ButtonDialog = {
 						output += '';
 					}
 			}
-			output += 'link="' + btnlink +'"';
+			output += 'link="' + btnlink +'" ';
+			output += 'target="' + btarget +'"';
 			output += ']';
 			
 		tinyMCEPopup.execCommand('mceInsertContent', false, output);
@@ -66,7 +68,7 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
  
 </script>
 
-<style type="text/css" media="screen"> .kad-popup {padding: 0 8px; font-size: 0;} #icon-dialog {font-size: 12px;} #icon-dialog label {font-size:14px; display:block; padding:4px;} #icon-dialog label.hex {font-size:12px; line-height:24px; display:inline-block; padding:6px 4px 6px 12px;} #icon-dialog select {display:block; height:28px; width:300px; font-size:12px;} #icon-dialog input {display:block; width:300px; height:24px;} #icon-dialog input.btn-hex {display:inline-block; width:120px; height:24px;} #icon-dialog a#insert {margin-top:15px;} .linebreak {margin-bottom:6px; border-bottom: solid 1px #d7d7d7; padding-bottom:6px}
+<style type="text/css" media="screen"> .kad-popup {padding: 0 8px 8px; font-size: 0;} #icon-dialog {font-size: 12px;} #icon-dialog label {font-size:14px; display:block; padding:4px;} #icon-dialog label.hex {font-size:12px; line-height:24px; display:inline-block; padding:6px 4px 6px 12px;} #icon-dialog select {display:block; height:28px; width:300px; font-size:12px;} #icon-dialog input {display:block; width:300px; height:24px;} #icon-dialog input.btn-hex {display:inline-block; width:120px; height:24px;} #icon-dialog a#insert {margin-top:15px;} .linebreak {margin-bottom:6px; border-bottom: solid 1px #d7d7d7; padding-bottom:6px}
 
 </style>
 
@@ -142,6 +144,15 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 				<input type="text" name="btn-link" value="" id="btn-link" />
 			</div>
             </div>
+            <div class="linebreak">
+			<div>
+				<label for="btn-target"><?php _e("Button Link Target", "virtue"); ?></label>
+				<select name="btn-target" id="btn-target">
+                	<option value="_self"><?php _e("Same Window", "virtue"); ?></option>
+                	<option value="_blank"><?php _e("New Window/Tab", "virtue"); ?></option>                    
+                 </select>
+			</div>
+			</div>
 			<div>	
 				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
 			</div>

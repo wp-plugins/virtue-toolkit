@@ -187,9 +187,10 @@ function kad_button_shortcode_function( $atts) {
 		'bcolor' => '',
 		'link' => '',
 		'text' => '',
+		'target' => '_self',
 		'tcolor' => '',
 ), $atts));
-	return '<a href="'.$link.'" class="kad-btn kad-btn-primary" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
+	return '<a href="'.$link.'" class="kad-btn kad-btn-primary" target="'.$target.'" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
 }
 function kad_blockquote_shortcode_function( $atts, $content) {
 	extract(shortcode_atts(array(
@@ -271,7 +272,6 @@ function virtuetoolkit_register_shortcodes(){
    add_shortcode('span1', 'kad_column1_function');
    add_shortcode('columnhelper', 'kad_columnhelper_function');
    add_shortcode('icon', 'kad_icon_shortcode_function');
-   add_shortcode('video', 'kad_video_shortcode_function');
    add_shortcode('pullquote', 'kad_pullquote_shortcode_function');
    add_shortcode('blockquote', 'kad_blockquote_shortcode_function');
    add_shortcode('btn', 'kad_button_shortcode_function');
@@ -301,7 +301,6 @@ function virtue_add_plugin( $plugin_array ) {
    $plugin_array['kadcolumns'] = VIRTUE_TOOLKIT_URL . '/shortcodes/columns/columns_shortgen.js';
    $plugin_array['kadicon'] = VIRTUE_TOOLKIT_URL . '/shortcodes/icons/icon_shortgen.js';
    $plugin_array['kadaccordion'] = VIRTUE_TOOLKIT_URL . '/shortcodes/accordion/accordion_shortgen.js';
-   $plugin_array['kadvideo'] = VIRTUE_TOOLKIT_URL . '/shortcodes/video/video_shortgen.js';
    $plugin_array['kadyoutube'] = VIRTUE_TOOLKIT_URL . '/shortcodes/youtube/youtube_shortgen.js';
    $plugin_array['kadvimeo'] = VIRTUE_TOOLKIT_URL . '/shortcodes/vimeo/vimeo_shortgen.js';
    $plugin_array['kadquote'] = VIRTUE_TOOLKIT_URL . '/shortcodes/pullquote/quote_shortgen.js';
