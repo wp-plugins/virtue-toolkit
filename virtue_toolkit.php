@@ -3,7 +3,7 @@
 /*
 Plugin Name: Virtue / Pinnacle ToolKit
 Description: Custom Portfolio and Shortcode functionality for Virtue and Pinnacle Wordpress Theme
-Version: 1.9
+Version: 2.0
 Author: Kadence Themes
 Author URI: http://kadencethemes.com/
 License: GPLv2 or later
@@ -17,6 +17,7 @@ function virtue_toolkit_deactivation() {
 register_deactivation_hook(__FILE__, 'virtue_toolkit_deactivation');
 
 require_once('post-types.php');
+require_once('gallery.php');
 require_once('shortcodes.php');
 require_once('shortcode_ajax.php');
 

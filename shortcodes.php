@@ -184,13 +184,18 @@ function kad_vimeo_shortcode_function( $atts, $content) {
 //Button
 function kad_button_shortcode_function( $atts) {
 	extract(shortcode_atts(array(
+		'id' => rand(1, 99),
 		'bcolor' => '',
+		'bhovercolor' => '',
+		'thovercolor' => '',
 		'link' => '',
 		'text' => '',
 		'target' => '_self',
 		'tcolor' => '',
 ), $atts));
-	return '<a href="'.$link.'" class="kad-btn kad-btn-primary" target="'.$target.'" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
+	$output = '<a href="'.$link.'" class="kad-btn kad-btn-primary" id="kadbtn'.$id.'" target="'.$target.'" style="background-color:'.$bcolor.'; color:'.$tcolor.'">'.$text.'</a>';
+	$output .= '<style type="text/css" media="screen">#kadbtn'.$id.':hover {background:'.$bhovercolor.' !important; color:'.$thovercolor.' !important;} </style>';
+	return $output;
 }
 function kad_blockquote_shortcode_function( $atts, $content) {
 	extract(shortcode_atts(array(
