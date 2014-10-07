@@ -101,8 +101,10 @@ function kadence_shortcode_gallery($attr) {
   return $output;
 }
 $pinnacle = get_option( 'pinnacle' );
-
-if(isset($pinnacle['pinnacle_gallery']) && $pinnacle['pinnacle_gallery'] == '1' &&  (! function_exists( 'kadence_gallery' ) ) )  {
+$virtue = get_option( 'virtue' );
+if(! function_exists( 'kadence_gallery' ) ) {
+if( (isset($pinnacle['pinnacle_gallery']) && $pinnacle['pinnacle_gallery'] == '1') ||  (isset($virtue['virtue_gallery']) && $virtue['virtue_gallery'] == '1') )  {
   remove_shortcode('gallery');
   add_shortcode('gallery', 'kadence_shortcode_gallery');
 } 
+}
