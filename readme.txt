@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.2
 Tested up to: 4.0
-Stable tag: 1.9
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,13 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 2.1 =
+* Small gallery update
+
+= 2.0 =
+* Move gallery to plugin.
+* Add button hover color.
 
 = 1.9 =
 * Fix some video shortcode issues.
