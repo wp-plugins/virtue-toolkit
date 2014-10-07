@@ -32,6 +32,10 @@ var ButtonDialog = {
 		var texthex = jQuery('#icon-dialog input#text-color-hex').val();
 		var bcolor = jQuery('#icon-dialog select#btn-color').val();
 		var btnhex = jQuery('#icon-dialog input#btn-color-hex').val();
+		var thovercolor = jQuery('#icon-dialog select#text-hover-color').val();
+		var texthoverhex = jQuery('#icon-dialog input#text-hover-color-hex').val();
+		var bhovercolor = jQuery('#icon-dialog select#btn-hover-color').val();
+		var btnhoverhex = jQuery('#icon-dialog input#btn-hover-color-hex').val();
 		var btnlink = jQuery('#icon-dialog input#btn-link').val();
 		var btarget = jQuery('#icon-dialog select#btn-target').val();		 		 
 		 
@@ -50,6 +54,20 @@ var ButtonDialog = {
 			} else {
 				if(bcolor) {
 					output += 'bcolor=' + bcolor + ' ';
+					} else {
+						output += '';
+					}
+			}
+			if(texthoverhex)
+				output += ' thovercolor=' + texthoverhex + ' ';
+				else {
+					output += 'thovercolor=' + thovercolor + ' ';
+				}
+			if(btnhoverhex) {
+				output += ' bhovercolor=' + btnhoverhex + ' ';
+			} else {
+				if(bhovercolor) {
+					output += 'bhovercolor=' + bhovercolor + ' ';
 					} else {
 						output += '';
 					}
@@ -136,6 +154,61 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 			<div>
 				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
 				<input type="text" class="btn-hex" name="btn-color-hex" value="" id="btn-color-hex" />
+			</div>
+            </div>
+            <div class="linebreak">
+            <div>
+				<label for="btn-color"><?php _e("Text Hover Color", "virtue"); ?></label>
+				<select name="btn-color" id="text-hover-color">
+                	<option value="#FFF"><?php _e("White", "virtue"); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
+                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
+					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
+                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
+                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
+                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
+                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
+                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option>
+                 </select>
+			</div>
+            <div>
+				<label class="hex" for="text-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<input type="text"class="btn-hex" name="text-color-hex" value="" id="text-hover-color-hex" />
+			</div>
+            </div>
+            <div class="linebreak">
+			<div>
+				<label for="btn-color"><?php _e("Button Background Hover Color", "virtue"); ?></label>
+				<select name="btn-color" id="btn-hover-color">
+                	<option value=""><?php _e("30% Primary Color", "virtue"); ?></option>
+                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
+					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
+                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
+                    <option value="#FFF"><?php _e("White", "virtue"); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
+                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
+                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
+                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
+                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option> 
+                 </select>
+			</div>
+			<div>
+				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<input type="text" class="btn-hex" name="btn-color-hex" value="" id="btn-hover-color-hex" />
 			</div>
             </div>
             <div class="linebreak">
