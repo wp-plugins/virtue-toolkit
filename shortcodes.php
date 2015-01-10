@@ -158,7 +158,7 @@ function kad_youtube_shortcode_function( $atts, $content) {
 		if($atts['maxwidth']) {$maxwidth = 'style="max-width:'.$atts['maxwidth'].'px;"';} else{ $maxwidth = '';}
 		// Create player
 		$return[] = '<div class="kad-youtube-shortcode videofit" '.$maxwidth.' >';
-		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="//www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		// Return result
 		return implode( '', $return );
@@ -182,7 +182,7 @@ function kad_vimeo_shortcode_function( $atts, $content) {
 		// Create player
 		$return[] = '<div class="kad-vimeo-shortcode  videofit '.$maxwidth.'">';
 		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] .
-			'" src="http://player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
+			'" src="//player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
 			$autoplay . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		// Return result
