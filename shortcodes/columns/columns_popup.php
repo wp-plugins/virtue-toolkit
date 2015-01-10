@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert Columns", "virtue"); ?></title>
+<title><?php _e("Insert Columns", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>

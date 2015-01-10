@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert Divider", "virtue"); ?></title>
+<title><?php _e("Insert Divider", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
@@ -67,17 +67,17 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 	<div id="icon-dialog">
 		<form action="/" method="get" accept-charset="utf-8">
 			<div>
-				<label for="dividers"><?php _e("Choose a Divider", "virtue"); ?></label>
+				<label for="dividers"><?php _e("Choose a Divider", 'kadencetoolkit'); ?></label>
 				<select name="divider" id="divider">
-                	<option value="hr"><?php _e("Line", "virtue"); ?></option>
-                    <option value="space_20"><?php _e("Padding Small", "virtue"); ?></option>
-                    <option value="space_40"><?php _e("Padding Medium", "virtue"); ?></option>
-                    <option value="space_80"><?php _e("Padding Large", "virtue"); ?></option>
-                    <option value="clear"><?php _e("Clear", "virtue"); ?></option>
+                	<option value="hr"><?php _e("Line", 'kadencetoolkit'); ?></option>
+                    <option value="space_20"><?php _e("Padding Small", 'kadencetoolkit'); ?></option>
+                    <option value="space_40"><?php _e("Padding Medium", 'kadencetoolkit'); ?></option>
+                    <option value="space_80"><?php _e("Padding Large", 'kadencetoolkit'); ?></option>
+                    <option value="clear"><?php _e("Clear", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
 			<div>	
-				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", 'kadencetoolkit'); ?></a>
 			</div>
 		</form>
 	</div>
