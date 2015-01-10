@@ -20,7 +20,7 @@ function kad_gallery_field( $field, $meta ) {
 
     if ( ! empty( $field['desc'] ) ) echo '<p class="cmb_metabox_description">' . $field['desc'] . '</p>';
 }
-add_filter( 'cmb_render_kad_gallery', 'kad_gallery_field', 10, 2 );
+
 
 function kad_gallery_field_sanitise( $field, $meta ) {
     if ( empty( $meta ) ) {
@@ -32,6 +32,7 @@ function kad_gallery_field_sanitise( $field, $meta ) {
 }
 $the_theme = wp_get_theme();
 if( ($the_theme->get( 'Name' ) == 'Pinnacle' || $the_theme->get( 'Template') == 'pinnacle') && ( $the_theme->get( 'Version') >= '1.0.6' ) ) {
+	add_filter( 'cmb_render_kad_gallery', 'kad_gallery_field', 10, 2 );
 add_filter( 'cmb_meta_boxes', 'kadence_pinnacletoolkit_metaboxes', 100 );
 }
 
@@ -682,6 +683,7 @@ $meta_boxes[] = array(
 
 $the_theme = wp_get_theme();
 if( ($the_theme->get( 'Name' ) == 'Virtue' || $the_theme->get( 'Template') == 'virtue') && ( $the_theme->get( 'Version') >= '2.3.5' ) ) {
+	add_filter( 'cmb_render_kad_gallery', 'kad_gallery_field', 10, 2 );
 add_filter( 'cmb_meta_boxes', 'kadence_virtuetoolkit_metaboxes', 100 );
 }
 function kadence_virtuetoolkit_metaboxes( array $meta_boxes ) {
