@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert YouTube Video", "virtue"); ?></title>
+<title><?php _e("Insert YouTube Video", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
@@ -63,26 +63,26 @@ body {padding: 0 8px; font-size: 0;}
 	<div id="youtube-dialog">
 		<form action="/" method="get" accept-charset="utf-8">
 			<div>
-				<label for="video"><?php _e("YouTube Link", "virtue"); ?></label>
+				<label for="video"><?php _e("YouTube Link", 'kadencetoolkit'); ?></label>
 				<input type="text" name="video" name="video" id="video" />
 			</div>
 			<div>
-				<label for="width"><?php _e("Width", "virtue"); ?></label>
+				<label for="width"><?php _e("Width", 'kadencetoolkit'); ?></label>
 				<input type="text" name="width" value="" id="width" />
-				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", "virtue"); ?>)</span>
+				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", 'kadencetoolkit'); ?>)</span>
 			</div>
 			<div>
-				<label for="height"><?php _e("Height", "virtue"); ?></label>
+				<label for="height"><?php _e("Height", 'kadencetoolkit'); ?></label>
 				<input type="text" name="height" value="" id="height" />
-				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", "virtue"); ?>)</span>
+				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", 'kadencetoolkit'); ?>)</span>
 			</div>
         	<div>
-				<label for="maxwidth"><?php _e("(Optional) Max Width", "virtue"); ?></label>
+				<label for="maxwidth"><?php _e("(Optional) Max Width", 'kadencetoolkit'); ?></label>
 				<input type="text" name="maxwidth" value="" id="maxwidth" />
-				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", "virtue"); ?>)</span>
+				<span style="display:inline-block; padding-left:5px;">(*<?php _e("note just use number", 'kadencetoolkit'); ?>)</span>
 			</div>
 			<div>	
-				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "kadencetoolkit"); ?></a>
 			</div>
 		</form>
 	</div>
