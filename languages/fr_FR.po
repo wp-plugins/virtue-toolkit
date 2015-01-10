@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kadence Toolkit\n"
-"POT-Creation-Date: 2015-01-09 22:46-0700\n"
-"PO-Revision-Date: 2015-01-09 22:47-0700\n"
+"POT-Creation-Date: 2015-01-10 00:32-0700\n"
+"PO-Revision-Date: 2015-01-10 00:32-0700\n"
 "Last-Translator: Matthieu Durocher <matthieu@technocyclope.com>\n"
 "Language-Team: Matthieu Durocher\n"
 "Language: fr_FR\n"
@@ -891,80 +891,80 @@ msgstr ""
 msgid "Slider Gallery"
 msgstr "Effacer la galerie"
 
-#: ../page-contact.php:11 ../template-contact.php:7
+#: ../page-contact.php:12 ../template-contact.php:7
 #, fuzzy
 msgid "This field is required."
 msgstr "Ce champ doit contenir une date valide."
 
-#: ../page-contact.php:12 ../template-contact.php:8
+#: ../page-contact.php:13 ../template-contact.php:8
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Entrez une adresse de courriel valide."
 
-#: ../page-contact.php:95 ../template-contact.php:95
+#: ../page-contact.php:96 ../template-contact.php:95
 msgid "Check your math."
 msgstr ""
 
-#: ../page-contact.php:100 ../template-contact.php:100
+#: ../page-contact.php:101 ../template-contact.php:100
 msgid "Please enter your name."
 msgstr "S'il vous plaît entrez votre nom."
 
-#: ../page-contact.php:107 ../template-contact.php:107
+#: ../page-contact.php:108 ../template-contact.php:107
 msgid "Please enter your email address."
 msgstr "S'il vous plaît, entrez votre adresse courriel."
 
-#: ../page-contact.php:110 ../template-contact.php:110
+#: ../page-contact.php:111 ../template-contact.php:110
 msgid "You entered an invalid email address."
 msgstr "Vous avez entré une adresse email valide."
 
-#: ../page-contact.php:117 ../template-contact.php:117
+#: ../page-contact.php:118 ../template-contact.php:117
 msgid "Please enter a message."
 msgstr "S'il vous plaît entrez un message."
 
-#: ../page-contact.php:134 ../pagetemplater.php:28 ../pagetemplater.php:114
+#: ../page-contact.php:135 ../pagetemplater.php:28 ../pagetemplater.php:114
 #: ../template-contact.php:134
 #, fuzzy
 msgid "Contact"
 msgstr "Informations de contact"
 
-#: ../page-contact.php:134 ../template-contact.php:134
+#: ../page-contact.php:135 ../template-contact.php:134
 msgid "From"
 msgstr "De"
 
-#: ../page-contact.php:135 ../template-contact.php:135
+#: ../page-contact.php:136 ../template-contact.php:135
 msgid "Name"
 msgstr "Nom complet"
 
-#: ../page-contact.php:136 ../template-contact.php:136
+#: ../page-contact.php:137 ../template-contact.php:136
 msgid "Email"
 msgstr "Courriel"
 
-#: ../page-contact.php:137 ../template-contact.php:137
+#: ../page-contact.php:138 ../template-contact.php:137
 #, fuzzy
 msgid "Comments"
 msgstr "Commentaire"
 
-#: ../page-contact.php:175 ../template-contact.php:173
+#: ../page-contact.php:176 ../template-contact.php:173
 msgid "Thanks, your email was sent successfully."
 msgstr "Merci, votre courriel a été envoyé avec succès."
 
-#: ../page-contact.php:179 ../template-contact.php:177
+#: ../page-contact.php:181 ../template-contact.php:177
 msgid "Sorry, an error occured."
 msgstr "Désolé, une erreur est survenue."
 
-#: ../page-contact.php:185 ../template-contact.php:183
+#: ../page-contact.php:187 ../template-contact.php:183
 msgid "Name:"
 msgstr "Nom complet :"
 
-#: ../page-contact.php:194
+#: ../page-contact.php:195
 msgid "Email: "
 msgstr "Courriel : "
 
-#: ../page-contact.php:200
+#: ../page-contact.php:203
 msgid "Message: "
 msgstr "Message :"
 
-#: ../page-contact.php:217 ../template-contact.php:218
+#: ../page-contact.php:223 ../template-contact.php:218
 msgid "Send Email"
 msgstr "Envoyez"
 
@@ -1074,8 +1074,8 @@ msgstr ""
 msgid "You are not allowed to be here"
 msgstr ""
 
-#: ../shortcodes.php:142 ../shortcodes.php:145 ../shortcodes.php:168
-#: ../shortcodes.php:171
+#: ../shortcodes.php:149 ../shortcodes.php:152 ../shortcodes.php:175
+#: ../shortcodes.php:178
 msgid "please specify correct url"
 msgstr ""
 

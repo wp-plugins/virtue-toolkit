@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kadence Toolkit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-09 22:46-0700\n"
-"PO-Revision-Date: 2015-01-09 22:46-0700\n"
+"POT-Creation-Date: 2015-01-10 00:32-0700\n"
+"PO-Revision-Date: 2015-01-10 00:32-0700\n"
 "Last-Translator: Georg Trixl <schick_post@gmx.net>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1051,98 +1051,98 @@ msgid "Slider Gallery"
 msgstr "Galerie leeren"
 
 # @ redux-framework
-#: ../page-contact.php:11 ../template-contact.php:7
+#: ../page-contact.php:12 ../template-contact.php:7
 #, fuzzy
 msgid "This field is required."
 msgstr "Dieses Feld muß ein gültiges Datum haben."
 
 # @ virtue
-#: ../page-contact.php:12 ../template-contact.php:8
+#: ../page-contact.php:13 ../template-contact.php:8
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Bitte Email-Adresse eingeben."
 
-#: ../page-contact.php:95 ../template-contact.php:95
+#: ../page-contact.php:96 ../template-contact.php:95
 msgid "Check your math."
 msgstr ""
 
 # @ virtue
-#: ../page-contact.php:100 ../template-contact.php:100
+#: ../page-contact.php:101 ../template-contact.php:100
 msgid "Please enter your name."
 msgstr "Bitte Namen eingeben."
 
 # @ virtue
-#: ../page-contact.php:107 ../template-contact.php:107
+#: ../page-contact.php:108 ../template-contact.php:107
 msgid "Please enter your email address."
 msgstr "Bitte Email-Adresse eingeben."
 
 # @ virtue
-#: ../page-contact.php:110 ../template-contact.php:110
+#: ../page-contact.php:111 ../template-contact.php:110
 msgid "You entered an invalid email address."
 msgstr "Sie haben eine ungültige Email-Adresse eingegeben."
 
 # @ virtue
-#: ../page-contact.php:117 ../template-contact.php:117
+#: ../page-contact.php:118 ../template-contact.php:117
 msgid "Please enter a message."
 msgstr "Bitte Nachricht eingeben."
 
 # @ virtue
-#: ../page-contact.php:134 ../pagetemplater.php:28 ../pagetemplater.php:114
+#: ../page-contact.php:135 ../pagetemplater.php:28 ../pagetemplater.php:114
 #: ../template-contact.php:134
 #, fuzzy
 msgid "Contact"
 msgstr " Kontakt"
 
 # @ virtue
-#: ../page-contact.php:134 ../template-contact.php:134
+#: ../page-contact.php:135 ../template-contact.php:134
 msgid "From"
 msgstr "Von"
 
 # @ virtue
 # @ woocommerce
-#: ../page-contact.php:135 ../template-contact.php:135
+#: ../page-contact.php:136 ../template-contact.php:135
 msgid "Name"
 msgstr "Name"
 
 # @ woocommerce
-#: ../page-contact.php:136 ../template-contact.php:136
+#: ../page-contact.php:137 ../template-contact.php:136
 msgid "Email"
 msgstr "Email"
 
 # @ virtue
-#: ../page-contact.php:137 ../template-contact.php:137
+#: ../page-contact.php:138 ../template-contact.php:137
 #, fuzzy
 msgid "Comments"
 msgstr "Kommentar"
 
 # @ virtue
-#: ../page-contact.php:175 ../template-contact.php:173
+#: ../page-contact.php:176 ../template-contact.php:173
 msgid "Thanks, your email was sent successfully."
 msgstr "Danke, Ihre Email wurde erfolgreich gesendet."
 
 # @ virtue
-#: ../page-contact.php:179 ../template-contact.php:177
+#: ../page-contact.php:181 ../template-contact.php:177
 #, fuzzy
 msgid "Sorry, an error occured."
 msgstr "Leider ist ein Fehler aufgetreten."
 
 # @ virtue
-#: ../page-contact.php:185 ../template-contact.php:183
+#: ../page-contact.php:187 ../template-contact.php:183
 msgid "Name:"
 msgstr "Name:"
 
 # @ virtue
-#: ../page-contact.php:194
+#: ../page-contact.php:195
 msgid "Email: "
 msgstr "Email: "
 
 # @ virtue
-#: ../page-contact.php:200
+#: ../page-contact.php:203
 msgid "Message: "
 msgstr "Nachricht: "
 
 # @ virtue
-#: ../page-contact.php:217 ../template-contact.php:218
+#: ../page-contact.php:223 ../template-contact.php:218
 msgid "Send Email"
 msgstr "Sende Email"
 
@@ -1270,8 +1270,8 @@ msgstr ""
 msgid "You are not allowed to be here"
 msgstr ""
 
-#: ../shortcodes.php:142 ../shortcodes.php:145 ../shortcodes.php:168
-#: ../shortcodes.php:171
+#: ../shortcodes.php:149 ../shortcodes.php:152 ../shortcodes.php:175
+#: ../shortcodes.php:178
 msgid "please specify correct url"
 msgstr ""
 
