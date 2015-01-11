@@ -335,7 +335,7 @@ function virtue_tinymce_shortcode_button() {
 add_action('init', 'virtue_tinymce_shortcode_button');
 
 //    Clean up Shortcodes
-function kad_content_clean_shortcodes($content){   
+function kadtool_content_clean_shortcodes($content){   
     $array = array (
         '<p>[' => '[', 
         ']</p>' => ']', 
@@ -344,8 +344,8 @@ function kad_content_clean_shortcodes($content){
     $content = strtr($content, $array);
     return $content;
 }
-add_filter('the_content', 'kad_content_clean_shortcodes');
-function kad_widget_clean_shortcodes($text){   
+add_filter('the_content', 'kadtool_content_clean_shortcodes');
+function kadtool_widget_clean_shortcodes($text){   
     $array = array (
         '<p>[' => '[', 
         ']</p>' => ']', 
@@ -356,5 +356,5 @@ function kad_widget_clean_shortcodes($text){
     $text = strtr($text, $array);
     return $text;
 }
-add_filter('widget_text', 'kad_widget_clean_shortcodes');
+add_filter('widget_text', 'kadtool_widget_clean_shortcodes');
 add_filter('widget_text', 'do_shortcode', 50);
