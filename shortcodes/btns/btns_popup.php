@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert Button", "virtue"); ?></title>
+<title><?php _e("Insert Button", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
@@ -96,138 +96,138 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 		<form action="/" method="get" accept-charset="utf-8">
         <div class="linebreak">
 			<div>
-				<label for="btn-text"><?php _e("Button Text", "virtue"); ?></label>
+				<label for="btn-text"><?php _e("Button Text", 'kadencetoolkit'); ?></label>
 				<input type="text" name="btn_text" value="" id="text" />
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="btn-color"><?php _e("Text Color", "virtue"); ?></label>
+				<label for="btn-color"><?php _e("Text Color", 'kadencetoolkit'); ?></label>
 				<select name="btn-color" id="text-color">
-                	<option value="#FFF"><?php _e("White", "virtue"); ?></option>
-                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
-                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
-                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
-					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
-                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
-                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
-                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
-                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
-                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
-                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
-                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
-                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
-                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
-                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
-                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option>
+                	<option value="#FFF"><?php _e("White", 'kadencetoolkit'); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", 'kadencetoolkit'); ?></option>
+                	<option value="#000"><?php _e("Black", 'kadencetoolkit'); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", 'kadencetoolkit'); ?></option>
+					<option value="#999"><?php _e("Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#CCC"><?php _e("Silver", 'kadencetoolkit'); ?></option>
+                    <option value="#FF0000"><?php _e("Red", 'kadencetoolkit'); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", 'kadencetoolkit'); ?></option>
+                    <option value="#008000"><?php _e("Green", 'kadencetoolkit'); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", 'kadencetoolkit'); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", 'kadencetoolkit'); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", 'kadencetoolkit'); ?></option>
+                    <option value="#800080"><?php _e("Purple", 'kadencetoolkit'); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", 'kadencetoolkit'); ?></option>
+                    <option value="#800000"><?php _e("Maroon", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
             <div>
-				<label class="hex" for="text-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<label class="hex" for="text-color-hex"><?php _e("Or Type Hex Color", 'kadencetoolkit'); ?></label>
 				<input type="text"class="btn-hex" name="text-color-hex" value="" id="text-color-hex" />
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="btn-color"><?php _e("Button Color", "virtue"); ?></label>
+				<label for="btn-color"><?php _e("Button Color", 'kadencetoolkit'); ?></label>
 				<select name="btn-color" id="btn-color">
-                	<option value=""><?php _e("Primary Color", "virtue"); ?></option>
-                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
-                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
-					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
-                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
-                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
-                    <option value="#FFF"><?php _e("White", "virtue"); ?></option>
-                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
-                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
-                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
-                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
-                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
-                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
-                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
-                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
-                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
-                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option>
+                	<option value=""><?php _e("Primary Color", 'kadencetoolkit'); ?></option>
+                	<option value="#000"><?php _e("Black", 'kadencetoolkit'); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", 'kadencetoolkit'); ?></option>
+					<option value="#999"><?php _e("Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#CCC"><?php _e("Silver", 'kadencetoolkit'); ?></option>
+                    <option value="#FFF"><?php _e("White", 'kadencetoolkit'); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", 'kadencetoolkit'); ?></option>
+                    <option value="#FF0000"><?php _e("Red", 'kadencetoolkit'); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", 'kadencetoolkit'); ?></option>
+                    <option value="#008000"><?php _e("Green", 'kadencetoolkit'); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", 'kadencetoolkit'); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", 'kadencetoolkit'); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", 'kadencetoolkit'); ?></option>
+                    <option value="#800080"><?php _e("Purple", 'kadencetoolkit'); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", 'kadencetoolkit'); ?></option>
+                    <option value="#800000"><?php _e("Maroon", 'kadencetoolkit'); ?></option>
                     
                  </select>
 			</div>
 			<div>
-				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", 'kadencetoolkit'); ?></label>
 				<input type="text" class="btn-hex" name="btn-color-hex" value="" id="btn-color-hex" />
 			</div>
             </div>
             <div class="linebreak">
             <div>
-				<label for="btn-color"><?php _e("Text Hover Color", "virtue"); ?></label>
+				<label for="btn-color"><?php _e("Text Hover Color", 'kadencetoolkit'); ?></label>
 				<select name="btn-color" id="text-hover-color">
-                	<option value="#FFF"><?php _e("White", "virtue"); ?></option>
-                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
-                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
-                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
-					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
-                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
-                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
-                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
-                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
-                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
-                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
-                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
-                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
-                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
-                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
-                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option>
+                	<option value="#FFF"><?php _e("White", 'kadencetoolkit'); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", 'kadencetoolkit'); ?></option>
+                	<option value="#000"><?php _e("Black", 'kadencetoolkit'); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", 'kadencetoolkit'); ?></option>
+					<option value="#999"><?php _e("Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#CCC"><?php _e("Silver", 'kadencetoolkit'); ?></option>
+                    <option value="#FF0000"><?php _e("Red", 'kadencetoolkit'); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", 'kadencetoolkit'); ?></option>
+                    <option value="#008000"><?php _e("Green", 'kadencetoolkit'); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", 'kadencetoolkit'); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", 'kadencetoolkit'); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", 'kadencetoolkit'); ?></option>
+                    <option value="#800080"><?php _e("Purple", 'kadencetoolkit'); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", 'kadencetoolkit'); ?></option>
+                    <option value="#800000"><?php _e("Maroon", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
             <div>
-				<label class="hex" for="text-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<label class="hex" for="text-color-hex"><?php _e("Or Type Hex Color", 'kadencetoolkit'); ?></label>
 				<input type="text"class="btn-hex" name="text-color-hex" value="" id="text-hover-color-hex" />
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="btn-color"><?php _e("Button Background Hover Color", "virtue"); ?></label>
+				<label for="btn-color"><?php _e("Button Background Hover Color", 'kadencetoolkit'); ?></label>
 				<select name="btn-color" id="btn-hover-color">
-                	<option value=""><?php _e("30% Primary Color", "virtue"); ?></option>
-                	<option value="#000"><?php _e("Black", "virtue"); ?></option>
-                    <option value="#CDCDCD"><?php _e("Light-Gray", "virtue"); ?></option>
-					<option value="#999"><?php _e("Gray", "virtue"); ?></option>
-                    <option value="#444"><?php _e("Dark-Gray", "virtue"); ?></option>
-                    <option value="#CCC"><?php _e("Silver", "virtue"); ?></option>
-                    <option value="#FFF"><?php _e("White", "virtue"); ?></option>
-                    <option value="#F2F2F2"><?php _e("Off-White", "virtue"); ?></option>
-                    <option value="#FF0000"><?php _e("Red", "virtue"); ?></option>
-                    <option value="#0000FF"><?php _e("Blue", "virtue"); ?></option>
-                    <option value="#008000"><?php _e("Green", "virtue"); ?></option>
-                    <option value="#FFFF00"><?php _e("Yellow", "virtue"); ?></option>
-                    <option value="#FFA500"><?php _e("Orange", "virtue"); ?></option>
-                    <option value="#FF00FF"><?php _e("Pink", "virtue"); ?></option>
-                    <option value="#800080"><?php _e("Purple", "virtue"); ?></option>
-                    <option value="#8B4513"><?php _e("Brown", "virtue"); ?></option>
-                    <option value="#800000"><?php _e("Maroon", "virtue"); ?></option> 
+                	<option value=""><?php _e("30% Primary Color", 'kadencetoolkit'); ?></option>
+                	<option value="#000"><?php _e("Black", 'kadencetoolkit'); ?></option>
+                    <option value="#CDCDCD"><?php _e("Light-Gray", 'kadencetoolkit'); ?></option>
+					<option value="#999"><?php _e("Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#444"><?php _e("Dark-Gray", 'kadencetoolkit'); ?></option>
+                    <option value="#CCC"><?php _e("Silver", 'kadencetoolkit'); ?></option>
+                    <option value="#FFF"><?php _e("White", 'kadencetoolkit'); ?></option>
+                    <option value="#F2F2F2"><?php _e("Off-White", 'kadencetoolkit'); ?></option>
+                    <option value="#FF0000"><?php _e("Red", 'kadencetoolkit'); ?></option>
+                    <option value="#0000FF"><?php _e("Blue", 'kadencetoolkit'); ?></option>
+                    <option value="#008000"><?php _e("Green", 'kadencetoolkit'); ?></option>
+                    <option value="#FFFF00"><?php _e("Yellow", 'kadencetoolkit'); ?></option>
+                    <option value="#FFA500"><?php _e("Orange", 'kadencetoolkit'); ?></option>
+                    <option value="#FF00FF"><?php _e("Pink", 'kadencetoolkit'); ?></option>
+                    <option value="#800080"><?php _e("Purple", 'kadencetoolkit'); ?></option>
+                    <option value="#8B4513"><?php _e("Brown", 'kadencetoolkit'); ?></option>
+                    <option value="#800000"><?php _e("Maroon", 'kadencetoolkit'); ?></option> 
                  </select>
 			</div>
 			<div>
-				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", "virtue"); ?></label>
+				<label class="hex" for="btn-color-hex"><?php _e("Or Type Hex Color", 'kadencetoolkit'); ?></label>
 				<input type="text" class="btn-hex" name="btn-color-hex" value="" id="btn-hover-color-hex" />
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="btn-link"><?php _e("Button Link", "virtue"); ?></label>
+				<label for="btn-link"><?php _e("Button Link", 'kadencetoolkit'); ?></label>
 				<input type="text" name="btn-link" value="" id="btn-link" />
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="btn-target"><?php _e("Button Link Target", "virtue"); ?></label>
+				<label for="btn-target"><?php _e("Button Link Target", 'kadencetoolkit'); ?></label>
 				<select name="btn-target" id="btn-target">
-                	<option value="_self"><?php _e("Same Window", "virtue"); ?></option>
-                	<option value="_blank"><?php _e("New Window/Tab", "virtue"); ?></option>                    
+                	<option value="_self"><?php _e("Same Window", 'kadencetoolkit'); ?></option>
+                	<option value="_blank"><?php _e("New Window/Tab", 'kadencetoolkit'); ?></option>                    
                  </select>
 			</div>
 			</div>
 			<div>	
-				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", 'kadencetoolkit'); ?></a>
 			</div>
 		</form>
 	</div>
