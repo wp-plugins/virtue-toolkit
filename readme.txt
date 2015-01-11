@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.3
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 2.4 =
+* Fix for olderversions of pinnacle
 
 = 2.3 =
 * Admin Gallery update.
