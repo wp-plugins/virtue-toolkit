@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert Accordion or Tabs", "virtue"); ?></title>
+<title><?php _e("Insert Accordion or Tabs", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
@@ -56,14 +56,14 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 	<div id="icon-dialog">
 		<form action="/" method="get" accept-charset="utf-8">
 			<div>
-				<label for="tabs"><?php _e("Accordion or Tabs", "virtue"); ?></label>
+				<label for="tabs"><?php _e("Accordion or Tabs", 'kadencetoolkit'); ?></label>
 				<select name="tabs" id="tabs">
-                	<option value="accordion"><?php _e("Accordion", "virtue"); ?></option>
-					<option value="tabs"><?php _e("Tabs", "virtue"); ?></option>
+                	<option value="accordion"><?php _e("Accordion", 'kadencetoolkit'); ?></option>
+					<option value="tabs"><?php _e("Tabs", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
 			<div>	
-				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", 'kadencetoolkit'); ?></a>
 			</div>
 		</form>
 	</div>
