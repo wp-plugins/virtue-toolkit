@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.5
+Stable tag: 2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,11 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 2.6 =
+* Fix for checkboxes not saving correctly.
+* Update security with contact forms.
+* add custom fields support to portfolio post.
 
 = 2.5 =
 * Fix for older versions of pinnacle

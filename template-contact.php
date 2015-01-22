@@ -2,7 +2,13 @@
 /*
 Template Name: Contact
 */
-get_header(); ?>
+get_header(); 
+global $post;
+	$form 		= get_post_meta( $post->ID, '_kad_contact_form', true );
+	$map 		= get_post_meta( $post->ID, '_kad_contact_map', true );
+	$pageemail 	= get_post_meta( $post->ID, '_kad_contact_form_email', true ); 
+	$form_math 	= get_post_meta( $post->ID, '_kad_contact_form_math', true );
+	if ($form == 'yes') { ?>
 	<script type="text/javascript">jQuery(document).ready(function ($) {$.extend($.validator.messages, {
 	        required: "<?php echo __('This field is required.', 'kadencetoolkit'); ?>",
 			email: "<?php echo __('Please enter a valid email address.', 'kadencetoolkit'); ?>",
@@ -10,7 +16,7 @@ get_header(); ?>
 		$("#contactForm").validate();
 	});</script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.validate-ck.js"></script>
-<?php global $post; $map = get_post_meta( $post->ID, '_kad_contact_map', true ); 
+	<?php } 
 	if ($map == 'yes') { ?>
 		    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 		    <?php 	$address 	= get_post_meta( $post->ID, '_kad_contact_address', true ); 
@@ -86,9 +92,6 @@ get_header(); ?>
 <?php 
 		echo '<style type="text/css" media="screen">#map_address {height:'.$mapheight.'px;}</style>';
 	} 
-
-    $pageemail = get_post_meta( $post->ID, '_kad_contact_form_email', true ); 
-	$form_math = get_post_meta( $post->ID, '_kad_contact_form_math', true );
 	if(isset($_POST['submitted'])) {
 		if(isset($form_math) && $form_math == 'yes') {
 			if(md5($_POST['kad_captcha']) != $_POST['hval']) {
@@ -150,8 +153,7 @@ get_header(); ?>
 
 	<div id="content" class="container">
    		<div class="row">
-   		<?php $form = get_post_meta( $post->ID, '_kad_contact_form', true );
-      	if ($form == 'yes') { ?>
+   		<?php if ($form == 'yes') { ?>
 	  		<div id="main" class="main col-md-5" role="main">
 	  			<div class="postclass pageclass">
 	  	<?php } else { ?>
@@ -201,7 +203,7 @@ get_header(); ?>
 								<?php if(isset($commentError)) { ?>
 									<span class="error"><?php echo esc_html($commentError);?></span>
 								<?php } ?>
-								<textarea name="comments" id="commentsText" rows="10" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
+								<textarea name="comments" id="commentsText" rows="10" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo esc_textarea(stripslashes($_POST['comments'])); } else { echo esc_textarea($_POST['comments']); } } ?></textarea>
 							</p>
 							<?php if(isset($form_math) && $form_math == 'yes') { ?>
 								<?php $one = rand(5, 50);

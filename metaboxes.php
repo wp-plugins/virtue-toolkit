@@ -919,14 +919,12 @@ $meta_boxes[] = array(
 				'desc' => '',
 				'id'   => $prefix . 'portfolio_item_types',
 				'type' => 'checkbox',
-				'std'  => '1'
 			),
 			array(
 				'name' => __('Display Item Excerpt', 'kadencetoolkit'),
 				'desc' => '',
 				'id'   => $prefix . 'portfolio_item_excerpt',
 				'type' => 'checkbox',
-				'std'  => '1'
 			),
 			array(
 				'name'    => __('Add Lightbox link in the top right of each item', 'kadencetoolkit'),

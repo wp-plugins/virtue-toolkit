@@ -7,16 +7,17 @@ Template Name: Contact
 		$map 				= get_post_meta( $post->ID, '_kad_contact_map', true ); 
 		$form_math 			= get_post_meta( $post->ID, '_kad_contact_form_math', true );
 		$contactformtitle 	= get_post_meta( $post->ID, '_kad_contact_form_title', true );
-		$form 				= get_post_meta( $post->ID, '_kad_contact_form', true ); ?>
-	<script type="text/javascript">jQuery(document).ready(function ($) {$.extend($.validator.messages, {
-	        required: "<?php echo __('This field is required.', 'kadencetoolkit'); ?>",
-			email: "<?php echo __('Please enter a valid email address.', 'kadencetoolkit'); ?>",
-		 });
-		$("#contactForm").validate();
-	});</script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.validate.js"></script>
-
-	<?php if ($map == 'yes') { ?>
+		$form 				= get_post_meta( $post->ID, '_kad_contact_form', true );
+		if ($form == 'yes') { ?>
+			<script type="text/javascript">jQuery(document).ready(function ($) {$.extend($.validator.messages, {
+			        required: "<?php echo __('This field is required.', 'kadencetoolkit'); ?>",
+					email: "<?php echo __('Please enter a valid email address.', 'kadencetoolkit'); ?>",
+				 });
+				$("#contactForm").validate();
+			});</script>
+			<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.validate.js"></script>
+		<?php } 
+		if ($map == 'yes') { ?>
 		    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 		    	<?php 	$address 	= get_post_meta( $post->ID, '_kad_contact_address', true ); 
 						$maptype 	= get_post_meta( $post->ID, '_kad_contact_maptype', true ); 
@@ -188,7 +189,7 @@ Template Name: Contact
 										<?php if(isset($nameError)) { ?>
 											<span class="error"><?php echo esc_html($nameError);?></span>
 										<?php } ?>
-										<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="required requiredField full" />
+										<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo esc_attr($_POST['contactName']);?>" class="required requiredField full" />
 									</p>
 
 									<p>
@@ -196,7 +197,7 @@ Template Name: Contact
 											<?php if(isset($emailError)) { ?>
 												<span class="error"><?php echo esc_html($emailError);?></span>
 											<?php } ?>
-										<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email full" />
+										<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo esc_attr($_POST['email']);?>" class="required requiredField email full" />
 									</p>
 
 									<p>
@@ -204,7 +205,7 @@ Template Name: Contact
 											<?php if(isset($commentError)) { ?>
 												<span class="error"><?php echo esc_html($commentError);?></span>
 											<?php } ?>
-										<textarea name="comments" id="commentsText" rows="10" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
+										<textarea name="comments" id="commentsText" rows="10" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo esc_textarea(stripslashes($_POST['comments'])); } else { echo esc_textarea($_POST['comments']); } } ?></textarea>
 									</p>
 									<?php if(isset($form_math) && $form_math == 'yes') {
 										$one = rand(5, 50);

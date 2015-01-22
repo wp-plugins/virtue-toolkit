@@ -30,7 +30,7 @@ function kad_portfolio_post_init() {
     'hierarchical' => false,
     'menu_position' => 8,
     'menu_icon' =>  'dashicons-format-gallery',
-    'supports' => array( 'title', 'editor', 'excerpt', 'author', 'page-attributes', 'thumbnail', 'comments' )
+    'supports' => array( 'title', 'editor', 'excerpt', 'author', 'page-attributes', 'thumbnail', 'custom-fields', 'comments' )
   ); 
   // Initialize Taxonomy Labels
 	$worklabels = array(
