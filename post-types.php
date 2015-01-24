@@ -1,20 +1,20 @@
 <?php
 // Custom post types
-function portfolio_post_init() {
+function kad_portfolio_post_init() {
   $portfoliolabels = array(
-    'name' =>  __('Portfolio', 'virtue'),
-    'singular_name' => __('Portfolio Item', 'virtue'),
-    'add_new' => __('Add New', 'virtue'),
-    'add_new_item' => __('Add New Portfolio Item', 'virtue'),
-    'edit_item' => __('Edit Portfolio Item', 'virtue'),
-    'new_item' => __('New Portfolio Item', 'virtue'),
-    'all_items' => __('All Portfolio', 'virtue'),
-    'view_item' => __('View Portfolio Item', 'virtue'),
-    'search_items' => __('Search Portfolio', 'virtue'),
-    'not_found' =>  __('No Portfolio Item found', 'virtue'),
-    'not_found_in_trash' => __('No Portfolio Items found in Trash', 'virtue'),
+    'name' =>  __('Portfolio', 'kadencetoolkit'),
+    'singular_name' => __('Portfolio Item', 'kadencetoolkit'),
+    'add_new' => __('Add New', 'kadencetoolkit'),
+    'add_new_item' => __('Add New Portfolio Item', 'kadencetoolkit'),
+    'edit_item' => __('Edit Portfolio Item', 'kadencetoolkit'),
+    'new_item' => __('New Portfolio Item', 'kadencetoolkit'),
+    'all_items' => __('All Portfolio', 'kadencetoolkit'),
+    'view_item' => __('View Portfolio Item', 'kadencetoolkit'),
+    'search_items' => __('Search Portfolio', 'kadencetoolkit'),
+    'not_found' =>  __('No Portfolio Item found', 'kadencetoolkit'),
+    'not_found_in_trash' => __('No Portfolio Items found in Trash', 'kadencetoolkit'),
     'parent_item_colon' => '',
-    'menu_name' => __('Portfolio', 'virtue')
+    'menu_name' => __('Portfolio', 'kadencetoolkit')
   );
 
   $portargs = array(
@@ -30,20 +30,20 @@ function portfolio_post_init() {
     'hierarchical' => false,
     'menu_position' => 8,
     'menu_icon' =>  'dashicons-format-gallery',
-    'supports' => array( 'title', 'editor', 'excerpt', 'author', 'page-attributes', 'thumbnail', 'comments' )
+    'supports' => array( 'title', 'editor', 'excerpt', 'author', 'page-attributes', 'thumbnail', 'custom-fields', 'comments' )
   ); 
   // Initialize Taxonomy Labels
 	$worklabels = array(
-		'name' => __( 'Portfolio Type', 'virtue' ),
-		'singular_name' => __( 'Type', 'virtue' ),
-		'search_items' =>  __( 'Search Type', 'virtue' ),
-		'all_items' => __( 'All Type', 'virtue' ),
-		'parent_item' => __( 'Parent Type', 'virtue' ),
-		'parent_item_colon' => __( 'Parent Type:', 'virtue' ),
-		'edit_item' => __( 'Edit Type', 'virtue' ),
-		'update_item' => __( 'Update Type', 'virtue' ),
-		'add_new_item' => __( 'Add New Type', 'virtue' ),
-		'new_item_name' => __( 'New Type Name', 'virtue' ),
+		'name' => __( 'Portfolio Type', 'kadencetoolkit' ),
+		'singular_name' => __( 'Type', 'kadencetoolkit' ),
+		'search_items' =>  __( 'Search Type', 'kadencetoolkit' ),
+		'all_items' => __( 'All Type', 'kadencetoolkit' ),
+		'parent_item' => __( 'Parent Type', 'kadencetoolkit' ),
+		'parent_item_colon' => __( 'Parent Type:', 'kadencetoolkit' ),
+		'edit_item' => __( 'Edit Type', 'kadencetoolkit' ),
+		'update_item' => __( 'Update Type', 'kadencetoolkit' ),
+		'add_new_item' => __( 'Add New Type', 'kadencetoolkit' ),
+		'new_item_name' => __( 'New Type Name', 'kadencetoolkit' ),
 	);
 	// Register Custom Taxonomy
 	register_taxonomy('portfolio-type',array('portfolio'), array(
@@ -56,5 +56,5 @@ function portfolio_post_init() {
 
   register_post_type( 'portfolio', $portargs );
 }
-add_action( 'init', 'portfolio_post_init', 1 );
+add_action( 'init', 'kad_portfolio_post_init', 1 );
 	

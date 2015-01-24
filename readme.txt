@@ -1,9 +1,9 @@
 === Virtue / Pinnacle ToolKit ===
 Contributors: britner
 Tags: 
-Requires at least: 3.2
-Tested up to: 4.0
-Stable tag: 2.1
+Requires at least: 3.5
+Tested up to: 4.1
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,26 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 2.6 =
+* Fix for checkboxes not saving correctly.
+* Update security with contact forms.
+* add custom fields support to portfolio post.
+
+= 2.5 =
+* Fix for older versions of pinnacle
+
+= 2.4 =
+* Fix for older versions of pinnacle
+
+= 2.3 =
+* Admin Gallery update.
+* New option for lightbox size in gallery
+
+= 2.2 =
+* Big update, move theme metaboxes to plugin. 
+* Add Contact form template to plugin.
+* Add translation files
 
 = 2.1 =
 * Small gallery update
