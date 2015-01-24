@@ -83,7 +83,7 @@ class Kadence_Page_Templater_Pinnacle {
 
 }
 $the_theme = wp_get_theme();
-if( ($the_theme->get( 'Name' ) == 'Pinnacle' || $the_theme->get( 'Template') == 'pinnacle') && ( $the_theme->get( 'Version') >= '1.0.6' ) ) {
+if( ($the_theme->get( 'Name' ) == 'Pinnacle' && $the_theme->get( 'Version') >= '1.0.6' ) || ($the_theme->get( 'Template') == 'pinnacle') ) {
         add_action( 'plugins_loaded', array( 'Kadence_Page_Templater_Pinnacle', 'get_instance' ) );
 }
 class Kadence_Page_Templater_Virtue {
@@ -169,6 +169,6 @@ class Kadence_Page_Templater_Virtue {
 
 }
 $the_theme = wp_get_theme();
-if( ($the_theme->get( 'Name' ) == 'Virtue' || $the_theme->get( 'Template') == 'virtue') && ( $the_theme->get( 'Version') >= '2.3.5' ) ) {
+if( ($the_theme->get( 'Name' ) == 'Virtue' && $the_theme->get( 'Version') >= '2.3.5') || ($the_theme->get( 'Template') == 'virtue') ) {
         add_action( 'plugins_loaded', array( 'Kadence_Page_Templater_Virtue', 'get_instance' ) );
 }
