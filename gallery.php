@@ -39,6 +39,7 @@ function kadence_shortcode_gallery($attr) {
     'columns'    => 3,
     'size'       => 'full',
     'include'    => '',
+    'lightboxsize' => 'full',
     'exclude'    => ''
   ), $attr));
 
@@ -75,7 +76,7 @@ function kadence_shortcode_gallery($attr) {
     return $output;
   }
     // NORMAL
-  $output .= '<div id="kad-wp-gallery'.$gallery_rn.'" class="kad-wp-gallery kad-light-wp-gallery clearfix rowtight">'; 
+  $output .= '<div id="kad-wp-gallery'.esc_attr($gallery_rn).'" class="kad-wp-gallery kad-light-wp-gallery clearfix rowtight">'; 
     if ($columns == '2') {$itemsize = 'tcol-lg-6 tcol-md-6 tcol-sm-6 tcol-xs-12 tcol-ss-12'; $imgsize = 600;} 
       else if ($columns == '1') {$itemsize = 'tcol-lg-12 tcol-md-12 tcol-sm-12 tcol-xs-12 tcol-ss-12'; $imgsize = 1200;} 
       else if ($columns == '3'){ $itemsize = 'tcol-lg-4 tcol-md-4 tcol-sm-4 tcol-xs-6 tcol-ss-12'; $imgsize = 400;} 
@@ -89,10 +90,14 @@ function kadence_shortcode_gallery($attr) {
     $attachment_url = wp_get_attachment_url($id);
     $image = aq_resize($attachment_url, $imgsize, $imgsize, true);
     if(empty($image)) {$image = $attachment_url;}
+    if($lightboxsize != 'full') {
+            $attachment_url = wp_get_attachment_image_src( $id, $lightboxsize);
+            $attachment_url = $attachment_url[0];
+    }
     $link = isset($attr['link']) && 'post' == $attr['link'] ? wp_get_attachment_link($id, $size, true, false) : wp_get_attachment_link($id, $size, false, false);
 
-    $output .= '<div class="'.$itemsize.' g_item"><div class="grid_item kad_gallery_fade_in gallery_item"><a href="'.$attachment_url.'" rel="lightbox[pp_gal]" class="lightboxhover">
-                          <img src="'.$image.'" alt="'.esc_attr($attachment->post_excerpt).'" class="light-dropshaddow"/>';
+    $output .= '<div class="'.esc_attr($itemsize).' g_item"><div class="grid_item kad_gallery_fade_in gallery_item"><a href="'.esc_url($attachment_url).'" rel="lightbox[pp_gal]" class="lightboxhover">
+                          <img src="'.esc_url($image).'" alt="'.esc_attr($attachment->post_excerpt).'" class="light-dropshaddow"/>';
      $output .= '</a>';
     $output .= '</div></div>';
   }
