@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.7
+Stable tag: 2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,10 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 2.8 =
+* Add fix for some servers not loading correctly.
+* Add filter to only show slider images on feature templates.
 
 = 2.6 =
 * Fix for checkboxes not saving correctly.

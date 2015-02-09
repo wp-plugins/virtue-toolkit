@@ -960,6 +960,12 @@ $meta_boxes[] = array(
 				),
 			),
 			array(
+				'name' => __("Slider Gallery", 'kadencetoolkit' ),
+				'desc' => __("Add images for gallery here", 'kadencetoolkit' ),
+				'id'   => $prefix . 'image_gallery',
+				'type' => 'kad_gallery',
+			),
+			array(
 				'name' => __('Max Image/Slider Height', 'kadencetoolkit'),
 				'desc' => __('Default is: 400 <b>(Note: just input number, example: 350)</b>', 'kadencetoolkit'),
 				'id'   => $prefix . 'posthead_height',
@@ -1094,7 +1100,7 @@ $meta_boxes[] = array(
 $meta_boxes[] = array(
 				'id'         => 'virtue_post_gallery',
 				'title'      => __("Slider Images", 'kadencetoolkit'),
-				'pages'      => array( 'post', 'page', 'portfolio'), // Post type
+				'pages'      => array( 'post', 'portfolio'), // Post type
 				'context'    => 'normal',
 				'priority'   => 'high',
 				'show_names' => true, // Show field names on the left
@@ -1105,8 +1111,7 @@ $meta_boxes[] = array(
 				'id'   => $prefix . 'image_gallery',
 				'type' => 'kad_gallery',
 			),
-			));
-
+	));
 	return $meta_boxes;
 }
 
