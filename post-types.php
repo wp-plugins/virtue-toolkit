@@ -24,7 +24,7 @@ function kad_portfolio_post_init() {
     'show_ui' => true, 
     'show_in_menu' => true, 
     'query_var' => true,
-    'rewrite'  => array( 'slug' => 'portfolio' ), /* you can specify its url slug */
+    //'rewrite'  => array( 'slug' => 'portfolio', 'feeds' => true),
     'has_archive' => false, 
     'capability_type' => 'post', 
     'hierarchical' => false,
@@ -57,4 +57,75 @@ function kad_portfolio_post_init() {
   register_post_type( 'portfolio', $portargs );
 }
 add_action( 'init', 'kad_portfolio_post_init', 1 );
-	
+function kad_portfolio_permalink_init(){
+global $wp_rewrite;
+$port_rewrite = apply_filters('kadence_portfolio_permalink_slug', 'portfolio');
+$portfolio_structure = '/'.$port_rewrite.'/%portfolio%';
+$wp_rewrite->add_rewrite_tag("%portfolio%", '([^/]+)', "portfolio=");
+$wp_rewrite->add_permastruct('portfolio', $portfolio_structure, false);
+}
+add_action( 'init', 'kad_portfolio_permalink_init', 2 );
+
+// Add filter to plugin init function
+add_filter('post_type_link', 'kad_portfolio_permalink', 10, 3);   
+
+function kad_portfolio_permalink($permalink, $post_id, $leavename) {
+    $post = get_post($post_id);
+    $rewritecode = array(
+        '%year%',
+        '%monthnum%',
+        '%day%',
+        '%hour%',
+        '%minute%',
+        '%second%',
+        $leavename? '' : '%postname%',
+        '%post_id%',
+        '%category%',
+        '%author%',
+        $leavename? '' : '%pagename%',
+    );
+ 
+    if ( '' != $permalink && !in_array($post->post_status, array('draft', 'pending', 'auto-draft')) ) {
+        $unixtime = strtotime($post->post_date);
+     
+        $category = '';
+        if ( strpos($permalink, '%category%') !== false ) {
+            $cats = wp_get_post_terms($post->ID, 'portfolio-type', array( 'orderby' => 'parent', 'order' => 'DESC' ));
+            if ( $cats ) {
+                //usort($cats, '_usort_terms_by_ID'); // order by ID
+                $category = $cats[0]->slug;
+            }
+            // show default category in permalinks, without
+            // having to assign it explicitly
+            if ( empty($category) ) {
+                $category = 'portfolio-category';
+            }
+        }
+     
+        $author = '';
+        if ( strpos($permalink, '%author%') !== false ) {
+            $authordata = get_userdata($post->post_author);
+            $author = $authordata->user_nicename;
+        }
+     
+        $date = explode(" ",date('Y m d H i s', $unixtime));
+        $rewritereplace =
+        array(
+            $date[0],
+            $date[1],
+            $date[2],
+            $date[3],
+            $date[4],
+            $date[5],
+            $post->post_name,
+            $post->ID,
+            $category,
+            $author,
+            $post->post_name,
+        );
+        $permalink = str_replace($rewritecode, $rewritereplace, $permalink);
+    } else { // if they're not using the fancy permalink option
+    }
+    return $permalink;
+}
+

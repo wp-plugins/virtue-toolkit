@@ -62,6 +62,8 @@ class Kadence_Page_Templater_Pinnacle {
 
                 global $post;
 
+                if ( !isset( $post ) ) return $template;
+
                 if (!isset($this->templates[get_post_meta( $post->ID, '_wp_page_template', true )] ) ) {
 					
                         return $template;
@@ -147,6 +149,8 @@ class Kadence_Page_Templater_Virtue {
         public function view_project_template( $template ) {
 
                 global $post;
+
+                if ( !isset( $post ) ) return $template;
 
                 if (!isset($this->templates[get_post_meta( $post->ID, '_wp_page_template', true )] ) ) {
                                         
