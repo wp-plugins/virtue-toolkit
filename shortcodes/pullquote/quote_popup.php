@@ -7,7 +7,7 @@ global $wp_scripts;
 ?>
 <!DOCTYPE html>
 <head>
-<title><?php _e("Insert Styled Quote", "virtue"); ?></title>
+<title><?php _e("Insert Styled Quote", 'kadencetoolkit'); ?></title>
  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 <script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
@@ -56,25 +56,25 @@ tinyMCEPopup.onInit.add(ButtonDialog.init, ButtonDialog);
 		<form action="/" method="get" accept-charset="utf-8">
         <div class="linebreak">
         	<div>
-				<label for="text"><?php _e("Style", "virtue"); ?></label>
+				<label for="text"><?php _e("Style", 'kadencetoolkit'); ?></label>
 				<select name="quote" id="quote">
-                	<option value="pull"><?php _e("Pull-Quote", "virtue"); ?></option>
-					<option value="block"><?php _e("Block-Quote", "virtue"); ?></option>
+                	<option value="pull"><?php _e("Pull-Quote", 'kadencetoolkit'); ?></option>
+					<option value="block"><?php _e("Block-Quote", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
             </div>
             <div class="linebreak">
 			<div>
-				<label for="text"><?php _e("Align", "virtue"); ?></label>
+				<label for="text"><?php _e("Align", 'kadencetoolkit'); ?></label>
 				<select name="quote" id="align">
-                	<option value="center"><?php _e("Center", "virtue"); ?></option>
-					<option value="left"><?php _e("Left", "virtue"); ?></option>
-                    <option value="right"><?php _e("Right", "virtue"); ?></option>
+                	<option value="center"><?php _e("Center", 'kadencetoolkit'); ?></option>
+					<option value="left"><?php _e("Left", 'kadencetoolkit'); ?></option>
+                    <option value="right"><?php _e("Right", 'kadencetoolkit'); ?></option>
                  </select>
 			</div>
             </div>
 			<div>	
-				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", "virtue"); ?></a>
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" style="display: block; line-height: 24px; text-align:center"><?php _e("Insert", 'kadencetoolkit'); ?></a>
 			</div>
 		</form>
 	</div>

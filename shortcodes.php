@@ -1,26 +1,29 @@
 <?php
 //Shortcode for accordion
 function kad_accordion_shortcode_function($atts, $content ) {
+	extract(shortcode_atts(array(
+'id' => rand(1, 99)
+), $atts));
 	$GLOBALS['pane_count'] = 0;
+	$GLOBALS['panes'] = '';
 	do_shortcode( $content );
-	$random = rand(1, 99);
 	if( is_array( $GLOBALS['panes'] ) ){
 	$i = 0;
 	foreach( $GLOBALS['panes'] as $tab ){
 		if ($i % 2 == 0) {$eo = "even";} else {$eo = "odd";}
-	$tabs[] = '<div class="panel panel-default panel-'.$eo.'"><div class="panel-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$random.'" href="#collapse'.$random.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$random.$tab['link'].'" class="panel-collapse collapse '.$tab['in'].'"><div class="panel-body postclass">'.$tab['content'].'</div></div></div>';
+	$tabs[] = '<div class="panel panel-default panel-'.$eo.'"><div class="panel-heading"><a class="accordion-toggle '.$tab['open'].'" data-toggle="collapse" data-parent="#accordionname'.$id.'" href="#collapse'.$id.$tab['link'].'"><h5><i class="icon-minus primary-color"></i><i class="icon-plus"></i>'.$tab['title'].'</h5></a></div><div id="collapse'.$id.$tab['link'].'" class="panel-collapse collapse '.$tab['in'].'"><div class="panel-body postclass">'.$tab['content'].'</div></div></div>';
 	$i++;
 }
-$return = "\n".'<div class="panel-group" id="accordionname'.$random.'">'.implode( "\n", $tabs ).'</div>'."\n";
+$return = "\n".'<div class="panel-group" id="accordionname'.$id.'">'.implode( "\n", $tabs ).'</div>'."\n";
 }
 return $return;
 }
 
 function kad_accordion_pane_function($atts, $content ) {
 	extract(shortcode_atts(array(
-'title' => 'Pane %d',
-'start' => ''
-), $atts));
+	'title' => 'Pane %d',
+	'start' => ''
+	), $atts));
 if ($start != '') {$open = '';} else {$open = 'collapsed';}
 if ($start != '') {$in = 'in';} else {$in = '';}
 
@@ -30,17 +33,21 @@ $GLOBALS['panes'][$x] = array( 'title' => $title, 'open' => $open, 'in' => $in, 
 $GLOBALS['pane_count']++;
 }
 function kad_tab_shortcode_function($atts, $content ) {
+		extract(shortcode_atts(array(
+'id' => rand(1, 99)
+), $atts));
+
 	$GLOBALS['tab_count'] = 0;
+	$GLOBALS['tabs'] = '';
 	do_shortcode( $content );
-	$random = rand(1, 99);
 	if( is_array( $GLOBALS['tabs'] ) ){
 		
 	foreach( $GLOBALS['tabs'] as $nav ){
-	$tabnav[] = '<li class="'.$nav['active'].'"><a href="#sctab'.$random.$nav['link'].'">'.$nav['title'].'</a></li>';
+	$tabnav[] = '<li class="'.$nav['active'].'"><a href="#sctab'.$id.$nav['link'].'">'.$nav['title'].'</a></li>';
 	}
 		
 	foreach( $GLOBALS['tabs'] as $tab ){
-	$tabs[] = '<div class="tab-pane clearfix '.$tab['active'].'" id="sctab'.$random.$tab['link'].'">'.$tab['content'].'</div>';
+	$tabs[] = '<div class="tab-pane clearfix '.$tab['active'].'" id="sctab'.$id.$tab['link'].'">'.$tab['content'].'</div>';
 	}
 	
 $return = "\n".'<ul class="nav nav-tabs sc_tabs">'.implode( "\n", $tabnav ).'</ul> <div class="tab-content postclass">'.implode( "\n", $tabs ).'</div>'."\n";
@@ -139,10 +146,10 @@ function kad_youtube_shortcode_function( $atts, $content) {
 				'theme' => 'dark'
 		), $atts, 'kad_youtube' );
 
-		if ( !$atts['url'] ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		if ( !$atts['url'] ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'kadencetoolkit' ) . '</p>';
 		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		if ( !$id ) return '<p class="error">YouTube: ' . __( 'please specify correct url', 'kadencetoolkit' ) . '</p>';
 		// Prepare params
 		if($atts['hidecontrols'] == 'true') {$atts['controls'] = 'false';}
 		foreach ( array('autoplay', 'controls', 'fs', 'modestbranding', 'theme' ) as $param ) $params[$param] = str_replace( array( 'false', 'true', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
@@ -151,7 +158,7 @@ function kad_youtube_shortcode_function( $atts, $content) {
 		if($atts['maxwidth']) {$maxwidth = 'style="max-width:'.$atts['maxwidth'].'px;"';} else{ $maxwidth = '';}
 		// Create player
 		$return[] = '<div class="kad-youtube-shortcode videofit" '.$maxwidth.' >';
-		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="//www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		// Return result
 		return implode( '', $return );
@@ -165,17 +172,17 @@ function kad_vimeo_shortcode_function( $atts, $content) {
 				'maxwidth' => '',
 				'autoplay'   => 'no'
 			), $atts, 'vimeo' );
-		if ( !$atts['url'] ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		if ( !$atts['url'] ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'kadencetoolkit' ) . '</p>';
 		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'virtue' ) . '</p>';
+		if ( !$id ) return '<p class="error">Vimeo: ' . __( 'please specify correct url', 'kadencetoolkit' ) . '</p>';
 
 		if($atts['maxwidth']) {$maxwidth = 'style="max-width:'.$atts['maxwidth'].'px;"';} else{ $maxwidth = '';}
 		$autoplay = ( $atts['autoplay'] === 'yes' ) ? '&amp;autoplay=1' : '';
 		// Create player
 		$return[] = '<div class="kad-vimeo-shortcode  videofit '.$maxwidth.'">';
 		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] .
-			'" src="http://player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
+			'" src="//player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
 			$autoplay . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		// Return result
@@ -326,3 +333,28 @@ function virtue_tinymce_shortcode_button() {
 
 }
 add_action('init', 'virtue_tinymce_shortcode_button');
+
+//    Clean up Shortcodes
+function kadtool_content_clean_shortcodes($content){   
+    $array = array (
+        '<p>[' => '[', 
+        ']</p>' => ']', 
+        ']<br />' => ']'
+    );
+    $content = strtr($content, $array);
+    return $content;
+}
+add_filter('the_content', 'kadtool_content_clean_shortcodes');
+function kadtool_widget_clean_shortcodes($text){   
+    $array = array (
+        '<p>[' => '[', 
+        ']</p>' => ']', 
+        '<p></p>' => '', 
+        ']<br />' => ']',
+        '<br />[' => '['
+    );
+    $text = strtr($text, $array);
+    return $text;
+}
+add_filter('widget_text', 'kadtool_widget_clean_shortcodes');
+add_filter('widget_text', 'do_shortcode', 50);
