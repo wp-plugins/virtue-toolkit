@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kadence Toolkit\n"
-"POT-Creation-Date: 2015-01-10 00:33-0700\n"
-"PO-Revision-Date: 2015-01-10 00:33-0700\n"
+"POT-Creation-Date: 2015-06-29 16:17-0700\n"
+"PO-Revision-Date: 2015-06-29 16:17-0700\n"
 "Last-Translator: María Digo <web.esdemay@gmail.com>\n"
 "Language-Team: Maria\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.1\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;_n:1,2\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -203,7 +203,7 @@ msgstr "Ninguno"
 msgid "Post Slider Gallery"
 msgstr "Galería Publicaciones"
 
-#: ../metaboxes.php:148 ../metaboxes.php:1106
+#: ../metaboxes.php:148 ../metaboxes.php:964 ../metaboxes.php:1110
 #, fuzzy
 msgid "Add images for gallery here"
 msgstr "Añadir imágenes a Galería"
@@ -266,7 +266,7 @@ msgid "Video Post Default"
 msgstr "Entradas de blog predeterminada"
 
 #: ../metaboxes.php:196 ../metaboxes.php:256 ../metaboxes.php:536
-#: ../metaboxes.php:737 ../metaboxes.php:960
+#: ../metaboxes.php:737 ../metaboxes.php:958
 msgid "Video"
 msgstr "Video"
 
@@ -330,7 +330,7 @@ msgstr "Tres filas"
 msgid "Project Options"
 msgstr "Opciones presentación"
 
-#: ../metaboxes.php:253 ../metaboxes.php:734 ../metaboxes.php:961
+#: ../metaboxes.php:253 ../metaboxes.php:734 ../metaboxes.php:959
 msgid "Image"
 msgstr "Imagen"
 
@@ -354,7 +354,7 @@ msgid "Add images for post here"
 msgstr "Añadir imágenes a Galería"
 
 #: ../metaboxes.php:267 ../metaboxes.php:552 ../metaboxes.php:742
-#: ../metaboxes.php:965
+#: ../metaboxes.php:969
 msgid "Max Image/Slider Height"
 msgstr "Altura Maxima  / Imagen Slider"
 
@@ -366,7 +366,7 @@ msgstr ""
 "b>"
 
 #: ../metaboxes.php:273 ../metaboxes.php:558 ../metaboxes.php:748
-#: ../metaboxes.php:971
+#: ../metaboxes.php:975
 msgid "Max Image/Slider Width"
 msgstr "Ancho Máximo / Imagen Slider"
 
@@ -464,7 +464,7 @@ msgid "If Video Project"
 msgstr "Video del proyecto"
 
 #: ../metaboxes.php:340 ../metaboxes.php:565 ../metaboxes.php:702
-#: ../metaboxes.php:825 ../metaboxes.php:988
+#: ../metaboxes.php:825 ../metaboxes.php:992
 msgid "Place Embed Code Here, works with youtube, vimeo..."
 msgstr "Espacio para incrustar código, funciona con youtube, vimeo..."
 
@@ -494,15 +494,15 @@ msgstr ""
 
 #: ../metaboxes.php:368 ../metaboxes.php:588 ../metaboxes.php:610
 #: ../metaboxes.php:619 ../metaboxes.php:760 ../metaboxes.php:835
-#: ../metaboxes.php:937 ../metaboxes.php:983 ../metaboxes.php:1011
-#: ../metaboxes.php:1027 ../metaboxes.php:1036
+#: ../metaboxes.php:935 ../metaboxes.php:987 ../metaboxes.php:1015
+#: ../metaboxes.php:1031 ../metaboxes.php:1040
 msgid "No"
 msgstr "No"
 
 #: ../metaboxes.php:369 ../metaboxes.php:587 ../metaboxes.php:609
-#: ../metaboxes.php:620 ../metaboxes.php:759 ../metaboxes.php:938
-#: ../metaboxes.php:982 ../metaboxes.php:1010 ../metaboxes.php:1026
-#: ../metaboxes.php:1037
+#: ../metaboxes.php:620 ../metaboxes.php:759 ../metaboxes.php:936
+#: ../metaboxes.php:986 ../metaboxes.php:1014 ../metaboxes.php:1030
+#: ../metaboxes.php:1041
 msgid "Yes"
 msgstr "Sí"
 
@@ -645,7 +645,7 @@ msgstr "Imagen ancho cabecera texto"
 msgid "Display Item Work Types"
 msgstr "Mostrar Categorías | Tipo -  Portfolio"
 
-#: ../metaboxes.php:503 ../metaboxes.php:925
+#: ../metaboxes.php:503 ../metaboxes.php:924
 msgid "Display Item Excerpt"
 msgstr "Mostrar Extracto Texto "
 
@@ -655,7 +655,7 @@ msgid "Add Lightbox link in each item"
 msgstr ""
 "A&ntilde;adir enlace Lightbox en la parte superior derecha de cada elemento"
 
-#: ../metaboxes.php:518 ../metaboxes.php:945
+#: ../metaboxes.php:518 ../metaboxes.php:943
 msgid "Feature Page Options"
 msgstr "Características Páginas Opciones"
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Page Title"
 msgstr "Título P&aacute;gina"
 
-#: ../metaboxes.php:540 ../metaboxes.php:1098
+#: ../metaboxes.php:540 ../metaboxes.php:1102
 msgid "Slider Images"
 msgstr "Imágenes de slider"
 
@@ -701,23 +701,23 @@ msgstr ""
 "Valor por defecto: 770 ó 1140 en diseño ancho completo <b>(Nota: introducir "
 "sólo número, ejemplo: 650, no se aplica en carrusel-slider)</b>"
 
-#: ../metaboxes.php:564 ../metaboxes.php:701 ../metaboxes.php:987
+#: ../metaboxes.php:564 ../metaboxes.php:701 ../metaboxes.php:991
 msgid "If Video Post"
 msgstr "Si video de publicación "
 
-#: ../metaboxes.php:573 ../metaboxes.php:996
+#: ../metaboxes.php:573 ../metaboxes.php:1000
 msgid "Contact Page Options"
 msgstr "Opciones página de contacto"
 
-#: ../metaboxes.php:582 ../metaboxes.php:1005
+#: ../metaboxes.php:582 ../metaboxes.php:1009
 msgid "Use Contact Form"
 msgstr "Usar formulario de contacto"
 
-#: ../metaboxes.php:592 ../metaboxes.php:1015
+#: ../metaboxes.php:592 ../metaboxes.php:1019
 msgid "Contact Form Title"
 msgstr "Título Formulario de Contacto"
 
-#: ../metaboxes.php:593 ../metaboxes.php:1016
+#: ../metaboxes.php:593 ../metaboxes.php:1020
 msgid "ex. Send us an Email"
 msgstr "ej.: Envíenos un correo electrónico"
 
@@ -730,63 +730,63 @@ msgstr "Formulario correo electrónico de contacto"
 msgid "ex. joe@gmail.com"
 msgstr ""
 
-#: ../metaboxes.php:604 ../metaboxes.php:1021
+#: ../metaboxes.php:604 ../metaboxes.php:1025
 msgid "Use Simple Math Question"
 msgstr ""
 
-#: ../metaboxes.php:614 ../metaboxes.php:1031
+#: ../metaboxes.php:614 ../metaboxes.php:1035
 msgid "Use Map"
 msgstr "Usar Mapa"
 
-#: ../metaboxes.php:624 ../metaboxes.php:1041
+#: ../metaboxes.php:624 ../metaboxes.php:1045
 msgid "Address"
 msgstr "Dirección"
 
-#: ../metaboxes.php:625 ../metaboxes.php:1042
+#: ../metaboxes.php:625 ../metaboxes.php:1046
 msgid "Enter your Location"
 msgstr "Ingrese su localidad"
 
-#: ../metaboxes.php:630 ../metaboxes.php:1047
+#: ../metaboxes.php:630 ../metaboxes.php:1051
 msgid "Map Type"
 msgstr "Tipo de Mapa"
 
-#: ../metaboxes.php:635 ../metaboxes.php:1052
+#: ../metaboxes.php:635 ../metaboxes.php:1056
 msgid "ROADMAP"
 msgstr "Callejero"
 
-#: ../metaboxes.php:636 ../metaboxes.php:1053
+#: ../metaboxes.php:636 ../metaboxes.php:1057
 msgid "HYBRID"
 msgstr "Híbrido"
 
-#: ../metaboxes.php:637 ../metaboxes.php:1054
+#: ../metaboxes.php:637 ../metaboxes.php:1058
 msgid "TERRAIN"
 msgstr "Terreno"
 
-#: ../metaboxes.php:638 ../metaboxes.php:1055
+#: ../metaboxes.php:638 ../metaboxes.php:1059
 msgid "SATELLITE"
 msgstr "Satélite"
 
-#: ../metaboxes.php:642 ../metaboxes.php:1059
+#: ../metaboxes.php:642 ../metaboxes.php:1063
 msgid "Map Zoom Level"
 msgstr "Nivel Zoom del Mapa"
 
-#: ../metaboxes.php:643 ../metaboxes.php:1060
+#: ../metaboxes.php:643 ../metaboxes.php:1064
 msgid "A good place to start is 15"
 msgstr "Punto para comenzar aconsejado es de 15"
 
-#: ../metaboxes.php:648 ../metaboxes.php:1065
+#: ../metaboxes.php:648 ../metaboxes.php:1069
 msgid "1 (World View)"
 msgstr "1(Vista Mundo)"
 
-#: ../metaboxes.php:668 ../metaboxes.php:1085
+#: ../metaboxes.php:668 ../metaboxes.php:1089
 msgid "21 (Street View)"
 msgstr "21 (Vista calle)"
 
-#: ../metaboxes.php:672 ../metaboxes.php:1089
+#: ../metaboxes.php:672 ../metaboxes.php:1093
 msgid "Map Height"
 msgstr "Altura Mapa"
 
-#: ../metaboxes.php:673 ../metaboxes.php:1090
+#: ../metaboxes.php:673 ../metaboxes.php:1094
 msgid "Default is 300"
 msgstr "Por defecto es 300"
 
@@ -798,7 +798,7 @@ msgstr "Caja Publicación Video"
 msgid "Beside"
 msgstr "Junto a"
 
-#: ../metaboxes.php:735 ../metaboxes.php:959
+#: ../metaboxes.php:735 ../metaboxes.php:957
 msgid "Image Slider"
 msgstr "Imagen Slider"
 
@@ -843,26 +843,31 @@ msgid "Default is 1:1 ratio <b>(Note: just input number, example: 350)</b>"
 msgstr ""
 "Valor por defecto proporción 1:1  <b>(Nota: sólo un número, ejemplo: 350)</b>"
 
-#: ../metaboxes.php:932
+#: ../metaboxes.php:930
 msgid "Add Lightbox link in the top right of each item"
 msgstr ""
 "A&ntilde;adir enlace Lightbox en la parte superior derecha de cada elemento"
 
-#: ../metaboxes.php:954
+#: ../metaboxes.php:952
 msgid "Feature Options"
 msgstr "Características Opciones"
 
-#: ../metaboxes.php:955
+#: ../metaboxes.php:953
 msgid "If image slider make sure images uploaded are at least 1140px wide."
 msgstr ""
 "Si usa imagen para slider, asegúrese de subir imágenes de al menos 1140 px"
 
-#: ../metaboxes.php:966
+#: ../metaboxes.php:963 ../metaboxes.php:1109
+#, fuzzy
+msgid "Slider Gallery"
+msgstr "Limpiar Galerí¡&iacute;a"
+
+#: ../metaboxes.php:970
 msgid "Default is: 400 <b>(Note: just input number, example: 350)</b>"
 msgstr ""
 "Por defecto es: 400 <b>(Nota: introducir sólo número, ejemplo: 350)</b>"
 
-#: ../metaboxes.php:972
+#: ../metaboxes.php:976
 msgid ""
 "Default is: 1140 <b>(Note: just input number, example: 650, does not apply "
 "to Carousel slider)</b>"
@@ -870,96 +875,91 @@ msgstr ""
 "Valor por defecto: 1140 <b>(Nota: sólo número, ejemplo: 650, no funciona "
 "para slider carrusel)</b>"
 
-#: ../metaboxes.php:977
+#: ../metaboxes.php:981
 msgid "Use Lightbox for Feature Image"
 msgstr "Usar lightbox para imagen destacadas"
 
-#: ../metaboxes.php:978
+#: ../metaboxes.php:982
 msgid ""
 "If feature option is set to image, choose to use lightbox link with image."
 msgstr ""
 "Si la opci&oacute;n se establece en  imagen, elija usar enlace a lightbox "
 "con la imagen."
 
-#: ../metaboxes.php:1105
-#, fuzzy
-msgid "Slider Gallery"
-msgstr "Limpiar Galerí¡&iacute;a"
-
-#: ../page-contact.php:12 ../template-contact.php:7
+#: ../page-contact.php:13 ../template-contact.php:13
 #, fuzzy
 msgid "This field is required."
 msgstr "Este campo debe ser una fecha v&aaute;lida."
 
-#: ../page-contact.php:13 ../template-contact.php:8
+#: ../page-contact.php:14 ../template-contact.php:14
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Introduzca una direcci&oacute;n email v&aacute;lida"
 
-#: ../page-contact.php:96 ../template-contact.php:95
+#: ../page-contact.php:97 ../template-contact.php:98
 msgid "Check your math."
 msgstr ""
 
-#: ../page-contact.php:101 ../template-contact.php:100
+#: ../page-contact.php:102 ../template-contact.php:103
 msgid "Please enter your name."
 msgstr "Por favor, escriba su nombre."
 
-#: ../page-contact.php:108 ../template-contact.php:107
+#: ../page-contact.php:109 ../template-contact.php:110
 msgid "Please enter your email address."
 msgstr "Por favor,escriba su dirección de correo electrónico."
 
-#: ../page-contact.php:111 ../template-contact.php:110
+#: ../page-contact.php:112 ../template-contact.php:113
 msgid "You entered an invalid email address."
 msgstr "La dirección de email no es v&aacute;lida."
 
-#: ../page-contact.php:118 ../template-contact.php:117
+#: ../page-contact.php:119 ../template-contact.php:120
 msgid "Please enter a message."
 msgstr "Por favor,escriba un mensaje."
 
-#: ../page-contact.php:135 ../pagetemplater.php:28 ../pagetemplater.php:114
-#: ../template-contact.php:134
+#: ../page-contact.php:136 ../pagetemplater.php:28 ../pagetemplater.php:116
+#: ../template-contact.php:137
 #, fuzzy
 msgid "Contact"
 msgstr "Contacto"
 
-#: ../page-contact.php:135 ../template-contact.php:134
+#: ../page-contact.php:136 ../template-contact.php:137
 msgid "From"
 msgstr "Desde"
 
-#: ../page-contact.php:136 ../template-contact.php:135
+#: ../page-contact.php:137 ../template-contact.php:138
 msgid "Name"
 msgstr "Nombre"
 
-#: ../page-contact.php:137 ../template-contact.php:136
+#: ../page-contact.php:138 ../template-contact.php:139
 msgid "Email"
 msgstr "Email"
 
-#: ../page-contact.php:138 ../template-contact.php:137
+#: ../page-contact.php:139 ../template-contact.php:140
 #, fuzzy
 msgid "Comments"
 msgstr "Comentarios"
 
-#: ../page-contact.php:176 ../template-contact.php:173
+#: ../page-contact.php:177 ../template-contact.php:175
 msgid "Thanks, your email was sent successfully."
 msgstr "Gracias. Su mensaje ha sido enviado. En breve contactaremos con usted."
 
-#: ../page-contact.php:181 ../template-contact.php:177
+#: ../page-contact.php:182 ../template-contact.php:179
 msgid "Sorry, an error occured."
 msgstr "Lo sentimos,se ha producido un error."
 
-#: ../page-contact.php:187 ../template-contact.php:183
+#: ../page-contact.php:188 ../template-contact.php:185
 msgid "Name:"
 msgstr "Nombre:"
 
-#: ../page-contact.php:195
-msgid "Email: "
+#: ../page-contact.php:196 ../template-contact.php:195
+msgid "Email:"
 msgstr "Email:"
 
-#: ../page-contact.php:203
-msgid "Message: "
+#: ../page-contact.php:204 ../template-contact.php:202
+msgid "Message:"
 msgstr "Mensaje:"
 
-#: ../page-contact.php:223 ../template-contact.php:218
+#: ../page-contact.php:224 ../template-contact.php:220
 msgid "Send Email"
 msgstr "Enviar"
 
@@ -1341,14 +1341,11 @@ msgstr ""
 msgid "YouTube Link"
 msgstr "Enlace icono"
 
-#: ../template-contact.php:193
-msgid "Email:"
-msgstr "Email:"
+#~ msgid "Email: "
+#~ msgstr "Email:"
 
-#: ../template-contact.php:200
-#, fuzzy
-msgid "Message:"
-msgstr "Mensaje:"
+#~ msgid "Message: "
+#~ msgstr "Mensaje:"
 
 #~ msgid "Sorry, but the page you were trying to view does not exist."
 #~ msgstr ""
