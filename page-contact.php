@@ -133,7 +133,7 @@ Template Name: Contact
 			$emailTo = get_option('admin_email');
 		}
 		$sitename = get_bloginfo('name');
-		$subject = '['.esc_html($sitename) . ' ' . __("Contact", "virtue").'] '. __("From", "virtue") . ' ' . esc_html($name);
+		$subject = '['.esc_html($sitename) . ' ' . __("Contact", "kadencetoolkit").'] '. __("From", "kadencetoolkit") . ' ' . esc_html($name);
 		$body = __('Name', 'kadencetoolkit').": $name \n\n";
 		$body .= __('Email', 'kadencetoolkit').": $email \n\n";
 		$body .= __('Comments', 'kadencetoolkit').":\n $comments";
@@ -193,7 +193,7 @@ Template Name: Contact
 									</p>
 
 									<p>
-										<label for="email"><b><?php _e('Email: ', 'kadencetoolkit'); ?></b></label>
+										<label for="email"><b><?php _e('Email:', 'kadencetoolkit'); ?></b></label>
 											<?php if(isset($emailError)) { ?>
 												<span class="error"><?php echo esc_html($emailError);?></span>
 											<?php } ?>
@@ -201,7 +201,7 @@ Template Name: Contact
 									</p>
 
 									<p>
-										<label for="commentsText"><b><?php _e('Message: ', 'kadencetoolkit'); ?></b></label>
+										<label for="commentsText"><b><?php _e('Message:', 'kadencetoolkit'); ?></b></label>
 											<?php if(isset($commentError)) { ?>
 												<span class="error"><?php echo esc_html($commentError);?></span>
 											<?php } ?>

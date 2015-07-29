@@ -3,7 +3,7 @@ Contributors: britner
 Tags: 
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: 2.9
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,10 @@ Install the plugin into the `/wp-content/plugins/` folder, and activate it.
 
 
 == Changelog ==
+
+= 3.0 =
+* Fix: Translation Issue
+* Add: Customizer only off function.
 
 = 2.9 =
 * Add: permalink flush, update for feeds link.
