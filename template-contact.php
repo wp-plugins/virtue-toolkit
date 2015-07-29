@@ -134,7 +134,7 @@ global $post;
 				$emailTo = get_option('admin_email');
 			}
 		$sitename = get_bloginfo('name');
-		$subject = '['.$sitename . ' ' . __("Contact", "pinnacle").'] '. __("From", "pinnacle") . ' ' . $name;
+		$subject = '['.$sitename . ' ' . __("Contact", "kadencetoolkit").'] '. __("From", "kadencetoolkit") . ' ' . $name;
 		$body = __('Name', 'kadencetoolkit').": $name \n\n";
 		$body .= __('Email', 'kadencetoolkit').": $email \n\n";
 		$body .= __('Comments', 'kadencetoolkit').":\n $comments";
